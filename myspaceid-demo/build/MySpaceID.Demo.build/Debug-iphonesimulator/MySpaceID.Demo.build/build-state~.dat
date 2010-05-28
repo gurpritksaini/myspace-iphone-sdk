@@ -1,0 +1,1457 @@
+TMySpaceID.Demo
+v7
+r0
+t296703915.801951
+cCheck dependencies
+cProcessInfoPlistFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Info.plist MySpaceID_Demo-Info.plist
+cCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/doubleicon.png doubleicon.png
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/dependenticon.png dependenticon.png
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/singleicon.png singleicon.png
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/toolicon.png toolicon.png
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/clockicon.png clockicon.png
+cCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib
+cCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib
+cCopyPlistFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/unitTests.plist unitTests.plist
+cCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/Movie.m4v Movie.m4v
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/snowleopard.jpeg snowleopard.jpeg
+cCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/Default.png Default.png
+cProcessPCH /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch.gch MySpaceID_Demo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/main.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID_DemoAppDelegate.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestController.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestTableViewCell.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/PersonViewController.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSObject+SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonBase.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonParser.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonWriter.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/Base64.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSMutableURLRequest+Parameters.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSURL+Base.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAConsumer.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OADataFetcher.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAMutableURLRequest.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAPlaintextSignatureProvider.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OARequestParameter.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAServiceTicket.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAToken.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOpenSearchApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRestV1.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRoaApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOffsiteContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOnsiteContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSSecurityContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/XPathQuery.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSConstants.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo normal i386
+cGenerateDSYMFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo
+cTouch /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk
+c000000004B2B86F600000000000000EE
+t1261143798
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A0BAA26000000000026DB00
+t1242278438
+s2546432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A0BAB370000000000260C20
+t1242278711
+s2493472
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A0BAB250000000000001355
+t1242278693
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/UTCoreTypes.h
+c000000004A0BAB9B0000000000005206
+t1242278811
+s20998
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004A0BAB9B0000000000015F10
+t1242278811
+s89872
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A0CBEBB000000000000075E
+t1242349243
+s1886
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A0CBF5F0000000001432D80
+t1242349407
+s21179776
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004748A1090000000000000DE2
+t1195942153
+s3554
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2/libxml/HTMLparser.h
+c000000004A0BA93B0000000000002401
+t1242278203
+s9217
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2/libxml/parser.h
+c000000004A0BA93B00000000000098A9
+t1242278203
+s39081
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2/libxml/tree.h
+c000000004A0BA93B0000000000008F14
+t1242278203
+s36628
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2/libxml/xpath.h
+c000000004A0BA93B0000000000003F47
+t1242278203
+s16199
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2/libxml/xpathInternals.h
+c000000004A0BA93B0000000000004BF8
+t1242278203
+s19448
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/lib/libxml2.2.dylib
+c000000004A0BA93B00000000001235D0
+t1242278203
+s1193424
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.h
+c000000004BFF1FDC00000000000001C6
+t1275011036
+s454
+i<UIKit/UIKit.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m
+c000000004BFF1FE400000000000003E4
+t1275011044
+s996
+i"MySpaceID_DemoAppDelegate.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.h
+c000000004BFF200C00000000000006AB
+t1275011084
+s1707
+i<UIKit/UIKit.h>
+i"MSApi.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m
+c000000004BFF20130000000000001E99
+t1275011091
+s7833
+i"PersonViewController.h"
+i"MSApi.h"
+i"SBJSON.h"
+i<MobileCoreServices/UTCoreTypes.h>
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib
+c000000004BCFA4C00000000000007FEE
+t1271899328
+s32750
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.h
+c000000004BFF1FEC000000000000046E
+t1275011052
+s1134
+i<UIKit/UIKit.h>
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m
+c000000004BFF1FB800000000000119CA
+t1275011000
+s72138
+i"UnitTestController.h"
+i"UnitTestTableViewCell.h"
+i"MSSecurityContext.h"
+i"MSOffsiteContext.h"
+i"MSOnsiteContext.h"
+i"MSRoaApi.h"
+i"MSRestV1.h"
+i"MSOpenSearchApi.h"
+i"SBJSON.h"
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib
+c000000004BA161D6000000000000576B
+t1268867542
+s22379
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.h
+c000000004BFF1FF80000000000000218
+t1275011064
+s536
+i<UIKit/UIKit.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m
+c000000004BFF20020000000000000325
+t1275011074
+s805
+i"UnitTestTableViewCell.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib
+c000000004B9DC1C50000000000004BA0
+t1268629957
+s19360
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Default.png
+c000000004BA70EDB000000000001B9D5
+t1269239515
+s113109
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib
+c000000004BA161D600000000000076AC
+t1268867542
+s30380
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Movie.m4v
+c000000004BA28C390000000000231547
+t1268943929
+s2299207
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.h
+c000000004BA28E390000000000000A01
+t1268944441
+s2561
+i<Foundation/Foundation.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m
+c000000004BA28E39000000000000089E
+t1268944441
+s2206
+i"NSObject+SBJSON.h"
+i"SBJsonWriter.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.h
+c000000004BA28E390000000000000916
+t1268944441
+s2326
+i<Foundation/Foundation.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m
+c000000004BA28E39000000000000087D
+t1268944441
+s2173
+i"NSString+SBJSON.h"
+i"SBJsonParser.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.h
+c000000004BA28E390000000000000AED
+t1268944441
+s2797
+i<Foundation/Foundation.h>
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m
+c000000004BA28E390000000000001ABC
+t1268944441
+s6844
+i"SBJSON.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.h
+c000000004BA28E390000000000000B82
+t1268944441
+s2946
+i<Foundation/Foundation.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m
+c000000004BA28E390000000000000AC1
+t1268944441
+s2753
+i"SBJsonBase.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.h
+c000000004BA28E390000000000000C0B
+t1268944441
+s3083
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m
+c000000004BA28E3900000000000036CF
+t1268944441
+s14031
+i"SBJsonParser.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.h
+c000000004BA28E390000000000001140
+t1268944441
+s4416
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m
+c000000004BA28E390000000000001E83
+t1268944441
+s7811
+i"SBJsonWriter.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.h
+c000000004BA28E3900000000000002EC
+t1268944441
+s748
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m
+c000000004BA28E390000000000000719
+t1268944441
+s1817
+i"Base64.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.h
+c000000004BA28E390000000000000551
+t1268944441
+s1361
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m
+c000000004BA28E390000000000000F2E
+t1268944441
+s3886
+i"NSMutableURLRequest+Parameters.h"
+i"NSURL+Base.h"
+i"OARequestParameter.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.h
+c000000004BA28E390000000000000540
+t1268944441
+s1344
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m
+c000000004BA28E39000000000000098B
+t1268944441
+s2443
+i"NSString+URLEncoding.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.h
+c000000004BA28E39000000000000051A
+t1268944441
+s1306
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m
+c000000004BA28E3900000000000005AC
+t1268944441
+s1452
+i"NSURL+Base.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.h
+c000000004BA28E39000000000000060A
+t1268944441
+s1546
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m
+c000000004BA28E390000000000000763
+t1268944441
+s1891
+i"OAConsumer.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.h
+c000000004BCE43780000000000000780
+t1271808888
+s1920
+i"OAMutableURLRequest.h"
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m
+c000000004BCE43780000000000001471
+t1271808888
+s5233
+i"OADataFetcher.h"
+i"OAMutableURLRequest.h"
+i"OAServiceTicket.h"
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.h
+c000000004BA28E390000000000000574
+t1268944441
+s1396
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m
+c000000004BA28E3900000000000007D7
+t1268944441
+s2007
+i"OAHMAC_SHA1SignatureProvider.h"
+i<CommonCrypto/CommonHMAC.h>
+i"Base64.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.h
+c000000004BA28E3900000000000007BF
+t1268944441
+s1983
+i"OAConsumer.h"
+i"OAToken.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m
+c000000004BA28E39000000000000176F
+t1268944441
+s5999
+i"OAMutableURLRequest.h"
+i"NSMutableURLRequest+Parameters.h"
+i"NSString+URLEncoding.h"
+i"NSURL+Base.h"
+i"OAConsumer.h"
+i"OAHMAC_SHA1SignatureProvider.h"
+i"OARequestParameter.h"
+i"OASignatureProviding.h"
+i"OAToken.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.h
+c000000004BA28E390000000000000571
+t1268944441
+s1393
+i<Foundation/Foundation.h>
+i"OASignatureProviding.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m
+c000000004BA28E3900000000000005D0
+t1268944441
+s1488
+i"OAPlaintextSignatureProvider.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.h
+c000000004BA28E39000000000000064C
+t1268944441
+s1612
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m
+c000000004BA28E3900000000000008B2
+t1268944441
+s2226
+i"OARequestParameter.h"
+i"NSString+URLEncoding.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.h
+c000000004BA28E390000000000000695
+t1268944441
+s1685
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m
+c000000004BA28E3900000000000008C4
+t1268944441
+s2244
+i"OAServiceTicket.h"
+i"OAMutableURLRequest.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OASignatureProviding.h
+c000000004BA28E390000000000000547
+t1268944441
+s1351
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.h
+c000000004BA28E390000000000000782
+t1268944441
+s1922
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m
+c000000004BA28E390000000000000C11
+t1268944441
+s3089
+i"OAToken.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.h
+c000000004BCFA4C000000000000022BB
+t1271899328
+s8891
+i"MSSecurityContext.h"
+i"MSOffsiteContext.h"
+i"MSOnsiteContext.h"
+i"MSRoaApi.h"
+i"MSRestV1.h"
+i"MSOpenSearchApi.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m
+c000000004BCFA9A0000000000000C31A
+t1271900576
+s49946
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.h
+c000000004BCFA4C00000000000000BC1
+t1271899328
+s3009
+i<Foundation/Foundation.h>
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m
+c000000004BCFA9A000000000000024B8
+t1271900576
+s9400
+i"MSOpenSearchApi.h"
+i"OAServiceTicket.h"
+i"NSString+URLEncoding.h"
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.h
+c000000004BCE43780000000000001075
+t1271808888
+s4213
+i<Foundation/Foundation.h>
+i"MSSecurityContext.h"
+i"MSOffsiteContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m
+c000000004BCFA9A00000000000004ABD
+t1271900576
+s19133
+i"MSRestV1.h"
+i"OAServiceTicket.h"
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.h
+c000000004BCE4378000000000000194E
+t1271808888
+s6478
+i<Foundation/Foundation.h>
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m
+c000000004BCFA9A00000000000006289
+t1271900576
+s25225
+i"MSRoaApi.h"
+i"OAServiceTicket.h"
+i"NSString+URLEncoding.h"
+i"SBJSON.h"
+i"MSApi.h"
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.h
+c000000004BCFA4C00000000000000C2F
+t1271899328
+s3119
+i<Foundation/Foundation.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m
+c000000004BCFA4C0000000000000145B
+t1271899328
+s5211
+i"MSConstants.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.h
+c000000004BCFA4C00000000000000283
+t1271899328
+s643
+i<Foundation/Foundation.h>
+i"MSSecurityContext.h"
+i"OAMutableURLRequest.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m
+c000000004BCE4378000000000000256D
+t1271808888
+s9581
+i"MSOffsiteContext.h"
+i"OAServiceTicket.h"
+i"OAToken.h"
+i"OAConsumer.h"
+i"OADataFetcher.h"
+i"NSString+URLEncoding.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.h
+c000000004BCE437800000000000001F3
+t1271808888
+s499
+i<Foundation/Foundation.h>
+i"MSSecurityContext.h"
+i"OAMutableURLRequest.h"
+i"OAConsumer.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m
+c000000004BCE43780000000000000992
+t1271808888
+s2450
+i"MSOnsiteContext.h"
+i"OAConsumer.h"
+i"OAMutableURLRequest.h"
+i"OADataFetcher.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.h
+c000000004BCE4378000000000000059F
+t1271808888
+s1439
+i<Foundation/Foundation.h>
+i"OAToken.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m
+c000000004BCE437800000000000003F8
+t1271808888
+s1016
+i"MSSecurityContext.h"
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.h
+c000000004BA28E3900000000000002D6
+t1268944441
+s726
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m
+c000000004BA28E390000000000001B23
+t1268944441
+s6947
+i"XPathQuery.h"
+i<libxml/tree.h>
+i<libxml/parser.h>
+i<libxml/HTMLparser.h>
+i<libxml/xpath.h>
+i<libxml/xpathInternals.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID_Demo_Prefix.pch
+c000000004B80D64B00000000000000C6
+t1266734667
+s198
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app
+t1275011115
+s612
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM
+t1275011115
+s102
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Default.png
+t1275011112
+s113109
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Info.plist
+t1275011112
+s700
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MainWindow.nib
+t1275011113
+s2427
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Movie.m4v
+t1275011113
+s2299207
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo
+t1275011115
+s341080
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/PersonViewController.nib
+t1275011113
+s4917
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/PkgInfo
+t1275011112
+s8
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/UnitTestController.nib
+t1275011113
+s2951
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/UnitTestTableViewCell.nib
+t1275011113
+s2196
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/clockicon.png
+t1275011112
+s3982
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/dependenticon.png
+t1275011112
+s2918
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/doubleicon.png
+t1275011112
+s3018
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/singleicon.png
+t1275011112
+s2905
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/snowleopard.jpeg
+t1275011112
+s3610
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/toolicon.png
+t1275011112
+s3884
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/unitTests.plist
+t1275011113
+s1400
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/Base64.o
+t1275011114
+s9116
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSApi.o
+t1275011115
+s58660
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSConstants.o
+t1275011115
+s17052
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOffsiteContext.o
+t1275011115
+s32076
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOnsiteContext.o
+t1275011115
+s14944
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOpenSearchApi.o
+t1275011115
+s34296
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRestV1.o
+t1275011115
+s60892
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRoaApi.o
+t1275011115
+s67280
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSSecurityContext.o
+t1275011115
+s15268
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID.Demo.LinkFileList
+c000000004BFF20280000000000001353
+t1275011112
+s4947
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID_DemoAppDelegate.o
+t1275011114
+s41556
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSMutableURLRequest+Parameters.o
+t1275011114
+s13520
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSObject+SBJSON.o
+t1275011114
+s7772
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+SBJSON.o
+t1275011114
+s7792
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+URLEncoding.o
+t1275011114
+s7692
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSURL+Base.o
+t1275011114
+s6404
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAConsumer.o
+t1275011114
+s10160
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OADataFetcher.o
+t1275011114
+s19516
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o
+t1275011114
+s8852
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAMutableURLRequest.o
+t1275011114
+s23424
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAPlaintextSignatureProvider.o
+t1275011114
+s6712
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OARequestParameter.o
+t1275011114
+s11956
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAServiceTicket.o
+t1275011115
+s12244
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAToken.o
+t1275011115
+s14744
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/PersonViewController.o
+t1275011114
+s64012
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJSON.o
+t1275011114
+s16792
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonBase.o
+t1275011114
+s12136
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonParser.o
+t1275011114
+s29864
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonWriter.o
+t1275011114
+s22068
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestController.o
+t1275011115
+s242268
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestTableViewCell.o
+t1275011114
+s20840
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/XPathQuery.o
+t1275011115
+s21976
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/main.o
+t1275011114
+s5968
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/clockicon.png
+c000000004B80D64B0000000000000F8E
+t1266734667
+s3982
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/dependenticon.png
+c000000004B80D64B0000000000000B66
+t1266734667
+s2918
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/doubleicon.png
+c000000004B80D64B0000000000000BCA
+t1266734667
+s3018
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m
+c000000004B80D64B0000000000000170
+t1266734667
+s368
+i<UIKit/UIKit.h>
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/singleicon.png
+c000000004B80D64B0000000000000B59
+t1266734667
+s2905
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/snowleopard.jpeg
+c000000004BA2D8C50000000000000E1A
+t1268963525
+s3610
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/toolicon.png
+c000000004B80D64B0000000000000F2C
+t1266734667
+s3884
+
+N/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/unitTests.plist
+c000000004BA29340000000000000097B
+t1268945728
+s2427
+
+N/var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch.gch
+t1275011114
+s12957072
+
+NMySpaceID_Demo-Info.plist
+c000000004BA07EDD0000000000000451
+t1268809437
+s1105
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies296703912#296703912#0(0"0(0#1#0"9007637348679712#0"0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/Base64.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.758330
+e296703914.806227
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/Base64.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m296703914#296703914#0(0"0(0#0#71"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m4300885448#2211"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/Base64.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/Base64.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.001621
+e296703915.122360
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSApi.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m296703915#296703915#0(0"0(0#0#72"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m4300885448#2211"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSApi.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSApi.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSConstants.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.192234
+e296703915.238331
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSConstants.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m296703915#296703915#0(0"0(0#0#81"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m4300885448#2226"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Config/MSConstants.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSConstants.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOffsiteContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.100471
+e296703915.192030
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOffsiteContext.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m296703915#296703915#0(0"0(0#0#87"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m4300885448#2237"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOffsiteContext.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOffsiteContext.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOnsiteContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.122467
+e296703915.184307
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOnsiteContext.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m296703915#296703915#0(0"0(0#0#86"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m4300885448#2235"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSOnsiteContext.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOnsiteContext.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOpenSearchApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.012228
+e296703915.100339
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOpenSearchApi.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m296703915#296703915#0(0"0(0#0#82"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m4300885448#2231"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSOpenSearchApi.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSOpenSearchApi.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRestV1.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.034100
+e296703915.167113
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRestV1.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m296703915#296703915#0(0"0(0#0#75"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m4300885448#2217"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRestV1.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRestV1.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRoaApi.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.056581
+e296703915.198296
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRoaApi.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m296703915#296703915#0(0"0(0#0#75"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m4300885448#2217"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Api/MSRoaApi.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSRoaApi.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSSecurityContext.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.167254
+e296703915.225314
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSSecurityContext.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m296703915#296703915#0(0"0(0#0#88"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m4300885448#2239"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/SDK/Context/MSSecurityContext.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MSSecurityContext.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID_DemoAppDelegate.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.515057
+e296703914.651747
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID_DemoAppDelegate.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m296703914#296703914#0(0"0(0#0#82"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m4300885448#2241"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/MySpaceID_DemoAppDelegate.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID_DemoAppDelegate.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSMutableURLRequest+Parameters.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.806340
+e296703914.866452
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSMutableURLRequest+Parameters.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m296703914#296703914#0(0"0(0#0#95"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m4300885448#2259"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSMutableURLRequest+Parameters.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSMutableURLRequest+Parameters.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSObject+SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.643799
+e296703914.692160
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSObject+SBJSON.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m296703914#296703914#0(0"0(0#0#79"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m4300885448#2228"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSObject+SBJSON.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSObject+SBJSON.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.651876
+e296703914.699721
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+SBJSON.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m296703914#296703914#0(0"0(0#0#79"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m4300885448#2228"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/NSString+SBJSON.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+SBJSON.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+URLEncoding.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.827779
+e296703914.879685
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+URLEncoding.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m296703914#296703914#0(0"0(0#0#85"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m4300885448#2239"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSString+URLEncoding.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSString+URLEncoding.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSURL+Base.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.828938
+e296703914.878448
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSURL+Base.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m296703914#296703914#0(0"0(0#0#75"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m4300885448#2219"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/NSURL+Base.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/NSURL+Base.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAConsumer.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.866582
+e296703914.917877
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAConsumer.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m296703914#296703914#0(0"0(0#0#75"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m4300885448#2219"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAConsumer.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAConsumer.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OADataFetcher.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.878553
+e296703914.945522
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OADataFetcher.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@86"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m296703914#296703914#0(0"0(0#0#78"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m4300885448#2225"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OADataFetcher.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OADataFetcher.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.879750
+e296703914.931462
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m296703914#296703914#0(0"0(0#0#93"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m4300885448#2255"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAHMAC_SHA1SignatureProvider.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAMutableURLRequest.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.917993
+e296703914.994938
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAMutableURLRequest.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m296703914#296703914#0(0"0(0#0#84"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m4300885448#2237"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAMutableURLRequest.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAMutableURLRequest.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAPlaintextSignatureProvider.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.931562
+e296703914.978728
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAPlaintextSignatureProvider.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m296703914#296703914#0(0"0(0#0#93"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m4300885448#2255"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAPlaintextSignatureProvider.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAPlaintextSignatureProvider.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OARequestParameter.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.945654
+e296703915.001517
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OARequestParameter.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m296703914#296703915#0(0"0(0#0#83"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m4300885448#2235"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OARequestParameter.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OARequestParameter.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAServiceTicket.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.978879
+e296703915.033985
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAServiceTicket.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m296703914#296703915#0(0"0(0#0#80"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m4300885448#2229"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAServiceTicket.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAServiceTicket.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAToken.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.995071
+e296703915.056491
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAToken.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m296703914#296703915#0(0"0(0#0#72"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m4300885448#2213"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/OAuth/OAToken.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/OAToken.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/PersonViewController.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.636653
+e296703914.737585
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/PersonViewController.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m296703914#296703914#0(0"0(0#0#77"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m4300885448#2231"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/PersonViewController.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJSON.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.692284
+e296703914.758266
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJSON.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m296703914#296703914#0(0"0(0#0#70"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m4300885448#2210"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJSON.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJSON.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonBase.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.699869
+e296703914.755037
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonBase.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m296703914#296703914#0(0"0(0#0#74"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m4300885448#2218"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonBase.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonBase.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonParser.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.737688
+e296703914.828873
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonParser.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m296703914#296703914#0(0"0(0#0#76"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m4300885448#2222"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonParser.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonParser.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonWriter.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.755127
+e296703914.827678
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m296703914#296703914#0(0"0(0#0#76"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m4300885448#2222"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/JSON/SBJsonWriter.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/SBJsonWriter.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestController.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.515781
+e296703915.012094
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestController.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m296703914#296703915#0(0"0(0#0#75"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m4300885448#2227"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestController.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestTableViewCell.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.516585
+e296703914.643539
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestTableViewCell.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@86"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m296703914#296703914#0(0"0(0#0#78"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m4300885448#2233"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/UnitTestTableViewCell.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/XPathQuery.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703915.184465
+e296703915.270111
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/XPathQuery.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m296703915#296703915#0(0"0(0#0#80"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m4300885448#2224"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID/XPathQuery/XPathQuery.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/XPathQuery.o0#
+
+CCompileC build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/main.o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703914.514010
+e296703914.636532
+r1
+xCompileC
+xbuild/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/main.o
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m296703914#296703914#0(0"0(0#0#53"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m4300885448#2191"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -include /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/main.m -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib
+s296703912.874523
+e296703913.417271
+r1
+xCompileXIB
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib
+lSLF07#2@43"CompileXIB Classes/PersonViewController.xib296703912#296703913#0(0"0(0#0#79"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib4300885448#539"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/PersonViewController.nib /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/PersonViewController.xib0#
+
+CCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib
+s296703912.853093
+e296703913.397195
+r1
+xCompileXIB
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib
+lSLF07#2@41"CompileXIB Classes/UnitTestController.xib296703912#296703913#0(0"0(0#0#77"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib4300885448#535"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/UnitTestController.nib /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestController.xib0#
+
+CCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib
+s296703912.853645
+e296703913.320879
+r1
+xCompileXIB
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib
+lSLF07#2@44"CompileXIB Classes/UnitTestTableViewCell.xib296703912#296703913#0(0"0(0#0#80"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib4300885448#541"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/UnitTestTableViewCell.nib /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Classes/UnitTestTableViewCell.xib0#
+
+CCompileXIB /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib
+s296703912.841730
+e296703913.654327
+r1
+xCompileXIB
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@25"CompileXIB MainWindow.xib296703912#296703913#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#61"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib4300885448#511"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MainWindow.nib /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MainWindow.xib0#
+
+CCopyPlistFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/unitTests.plist unitTests.plist
+s296703912.873186
+e296703913.736144
+r1
+xCopyPlistFile
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/unitTests.plist
+xunitTests.plist
+lSLF07#2@20"Copy unitTests.plist296703912#296703913#0(0"0(0#0#62"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/unitTests.plist4300885448#413"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 unitTests.plist --outdir /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/Default.png Default.png
+s296703912.876348
+e296703912.999738
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/Default.png
+xDefault.png
+lSLF07#2@16"Copy Default.png296703912#296703912#0(0"0(0#0#58"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Default.png4300885448#486"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Default.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/Movie.m4v Movie.m4v
+s296703912.875135
+e296703913.757521
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/Movie.m4v
+xMovie.m4v
+lSLF07#2@14"Copy Movie.m4v296703912#296703913#0(0"0(0#0#56"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Movie.m4v4300885448#484"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/Movie.m4v /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/clockicon.png clockicon.png
+s296703912.852539
+e296703912.874465
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/clockicon.png
+xclockicon.png
+lSLF07#2@18"Copy clockicon.png296703912#296703912#0(0"0(0#0#60"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/clockicon.png4300885448#488"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/clockicon.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/dependenticon.png dependenticon.png
+s296703912.850869
+e296703912.874095
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/dependenticon.png
+xdependenticon.png
+lSLF07#2@22"Copy dependenticon.png296703912#296703912#0(0"0(0#0#64"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/dependenticon.png4300885448#492"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/dependenticon.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/doubleicon.png doubleicon.png
+s296703912.850329
+e296703912.873002
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/doubleicon.png
+xdoubleicon.png
+lSLF07#2@19"Copy doubleicon.png296703912#296703912#0(0"0(0#0#61"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/doubleicon.png4300885448#489"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/doubleicon.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/singleicon.png singleicon.png
+s296703912.851405
+e296703912.874219
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/singleicon.png
+xsingleicon.png
+lSLF07#2@19"Copy singleicon.png296703912#296703912#0(0"0(0#0#61"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/singleicon.png4300885448#489"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/singleicon.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/snowleopard.jpeg snowleopard.jpeg
+s296703912.875735
+e296703912.895994
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/snowleopard.jpeg
+xsnowleopard.jpeg
+lSLF07#2@21"Copy snowleopard.jpeg296703912#296703912#0(0"0(0#0#63"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/snowleopard.jpeg4300885448#491"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/snowleopard.jpeg /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CCpResource build/Debug-iphonesimulator/MySpaceID.Demo.app/toolicon.png toolicon.png
+s296703912.851967
+e296703912.874354
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MySpaceID.Demo.app/toolicon.png
+xtoolicon.png
+lSLF07#2@17"Copy toolicon.png296703912#296703912#0(0"0(0#0#59"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/toolicon.png4300885448#487"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/toolicon.png /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+
+CGenerateDSYMFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo
+s296703915.710262
+e296703915.781085
+r1
+xGenerateDSYMFile
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo
+lSLF07#2@130"GenerateDSYMFile build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo296703915#296703915#0(0"0(0#0#108"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo4300885448#428"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app.dSYM0#
+
+CLd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo normal i386
+s296703915.270207
+e296703915.710169
+r1
+xLd
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo
+xnormal
+xi386
+lSLF07#2@113"Link /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo296703915#296703915#0(0"0(0#0#0"4300885448#1031"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -L/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -L/Users/ngranado/Code/myspaceid-iphone-sdk/Demo -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -filelist /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/Objects-normal/i386/MySpaceID.Demo.LinkFileList -mmacosx-version-min=10.5 -ObjC -framework Foundation -framework UIKit -framework CoreGraphics -lxml2.2 -framework MobileCoreServices -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/MySpaceID.Demo0#
+
+CProcessInfoPlistFile /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Info.plist MySpaceID_Demo-Info.plist
+s296703912.819891
+e296703912.841634
+r1
+xProcessInfoPlistFile
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Info.plist
+xMySpaceID_Demo-Info.plist
+lSLF07#2@33"Process MySpaceID_Demo-Info.plist296703912#296703912#0(0"0(0#0#72"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID_Demo-Info.plist20548107098062944#524"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility MySpaceID_Demo-Info.plist -genpkginfo /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app/Info.plist0#
+
+CProcessPCH /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch.gch MySpaceID_Demo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s296703913.757792
+e296703914.513804
+r1
+xProcessPCH
+x/var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch.gch
+xMySpaceID_Demo_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile MySpaceID_Demo_Prefix.pch296703913#296703914#0(0"0(0#0#72"/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID_Demo_Prefix.pch4300885448#2068"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-generated-files.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-own-target-headers.hmap -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-all-target-headers.hmap -iquote /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/MySpaceID.Demo-project-headers.hmap -F/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/libxml2 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources/i386 -I/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/MySpaceID.Demo.build/Debug-iphonesimulator/MySpaceID.Demo.build/DerivedSources -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/MySpaceID_Demo_Prefix.pch -o /var/folders/tB/tBWWMrJuHvmoRUhbpplem++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MySpaceID_Demo_Prefix-ernblswneapprnfozcdzvmzewkvv/MySpaceID_Demo_Prefix.pch.gch0#
+
+CTouch /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app
+s296703915.781179
+e296703915.801895
+r1
+xTouch
+x/Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app
+lSLF07#2@99"Touch /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app296703915#296703915#0(0"0(0#0#0"4300885448#301"    cd /Users/ngranado/Code/myspaceid-iphone-sdk/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ngranado/Code/myspaceid-iphone-sdk/Demo/build/Debug-iphonesimulator/MySpaceID.Demo.app0#
+

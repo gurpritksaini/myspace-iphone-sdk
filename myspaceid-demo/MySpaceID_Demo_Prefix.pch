@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'MySpaceID.Demo' target in the 'MySpaceID.Demo' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+#endif
