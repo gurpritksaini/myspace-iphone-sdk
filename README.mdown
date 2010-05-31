@@ -1,7 +1,7 @@
 myspaceid-iphone-sdk
 ====================
 
-This document outlines how to get started using the MySpaceID iPhone SDK.  The SDK is meant to support OffSite and OnSite applications that wish to make applications on the iPhone.  The SDK will enable your application to login MySpace users and access their approved data.  You will have access to all the REST V1, OpenSocail 0.9, and OpenSearch APIs currently supported on the MySpace Developer Platform.
+This document outlines how to get started using the MySpaceID iPhone SDK.  The SDK is meant to support OffSite and OnSite applications that wish to make applications on the iPhone.  The SDK will enable your application to login MySpace users and access their approved data.  You will have access to all the REST V1, OpenSocial 0.9, and OpenSearch APIs currently supported on the MySpace Developer Platform.
 
 oauth on iphone
 ---------------
