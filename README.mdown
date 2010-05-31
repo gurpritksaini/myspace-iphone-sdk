@@ -3,12 +3,12 @@ myspaceid-iphone-sdk
 
 This document outlines how to get started using the MySpaceID iPhone SDK.  The SDK is meant to support OffSite and OnSite applications that wish to make applications on the iPhone.  The SDK will enable your application to login MySpace users and access their approved data.  You will have access to all the REST V1, OpenSocail 0.9, and OpenSearch APIs currently supported on the MySpace Developer Platform.
 
-OAuth on iPhone:
+oauth on iphone
 ---------------
 
 Due to the particularities of the  OAuth specification, users are required to input their credentials at the OAuth provider.  This requires iPhone applications to launch the Safari browser and send their user to the MySpace Authentication page.  Once the user input his/her valid credentials, the OAuth spec requires the provider to return to the callback URL that was used when coming to the auth page.  On the iPhone, we are able to register an application’s URL scheme, which will permit other applications to launch your app.  The iPhone SDK encapsulates this entire process for you, making it easy to set up 3-legged-OAuth on your iPhone app.  You will need to define a unique URL scheme that you believe other apps will not use, in order to avoid confusion on the iPhone. The OAuth libraries are largely based upon work done by Jon Crosby, with some tweaking needed to accommodate our requirements.  Special thanks to him.
 
-Parsing the HTTP Responses:
+parsing the http responses
 --------------------------
 
 We recognize that developers would like to have their prerogative in choosing the parsing mechanism they prefer.  The previous version of the iPhone SDK, XML was the response format for most of the API calls.  Due to the difficult nature of XML parsing on the iPhone, I have included sample code that enables XPath queries on XML data. This is C code that utilizes the libxml2.2.dylib available on the iPhone.  I’ve specifically left XML parsing code out of the SDK classes so that developers can choose their own method of parsing. For more details regarding the XPath code, please refer to Matt Gallagher’s blog post Using libxml2 for XML parsing and XPath queries in Cocoa.  
@@ -17,7 +17,7 @@ For JSON parsing, we have included JSON.Framework into the project for parsing. 
 
 In this version of the SDK, we introduced a MSApi class which encapsulates both the API library and MSSecurityContext that is used in the underlying code. It is meant to simplify developer adoption. If you are interested in using the underlying code, be our guest. You can refer to the unit tests to get a better idea of how those classes work.
 
-Using the SDK:
+using the sdk
 -------------
 
 Although the sample code should be enough to explain how to use the SDK, we just want to highlight a few things before letting you dive into the code:
@@ -34,7 +34,7 @@ a.	To use MSApi asynchronously, pass a delegate into the constructor method. Tha
 b.	To use MSApi synchronously, do not pass a delegate into the constructor. Note: getRequest Token and getAccessToken shall remain synchronous by default. 
 9.	Every API method is given an optional NSDictionary parameter named “queryParams”. This is designed to allow developers to add additional query parameters into the request. Since OpenSocial is an evolving and large spec, this dictionary parameter is meant to allow developers to use the OpenSocial specification’s optional functionality. Please review the OpenSocial implementation within the MySpace Developer Platform to find out what optional parameters are currently supported. There are helper methods for creating typical NSDictionary objects that are currently supported within MySpace. You can find these methods (named “makeQueryDictionary”) in the MSOpenSearch, MSRestV1 and MSRoaApi classes.
 
-myspaceid-demo:
+myspaceid-demo
 --------------
 
 This sample comes with two view controllers that help get you familiar with the SDK. The first controller is meant for unit testing. It lists all the major APIs supported per Endpoint library. In order to make use of the UnitTestViewController, make sure to go to the setupContext method and enter the correct consumer_key, consumer_secret, access_token_key and access_token_secret of your application. Otherwise any tests that require OAuth will fail. You can run all the tests or click them individually. If you are debugging the application, you can see the responses in the console window. You will also see the reason why unit tests fail. 
