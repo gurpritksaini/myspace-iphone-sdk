@@ -4,7 +4,7 @@
 //
 //  Copyright MySpace, Inc. 2010. All rights reserved.
 //
-
+#import "MySpaceConstants.h"
 #import "UnitTestController.h"
 #import "UnitTestTableViewCell.h"
 #import "MSSecurityContext.h"
@@ -60,36 +60,30 @@
 
 #pragma mark --Unit Test Helper Methods--
 
-////**********************************************************************
-////  PLEASE UPDATE VALUES IN THIS METHOD BEFORE RUNNING YOUR UNIT TESTS
-////**********************************************************************
 - (MSSecurityContext*) setupContext{
 	BOOL myAppIsOffsite = YES; 
 
-	NSString *consumer_key = @"";
-	NSString *consumer_secret = @"";
+	NSString *application_scheme = APPLICATION_SCHEME;
+	NSString *consumer_key = CONSUMER_KEY;
+	NSString *consumer_secret = CONSUMER_SECRET;
 	
-	NSString *access_token_key = @"";
-	NSString *access_token_secret = @"";
+	NSString *access_token_key = ACCESS_TOKEN_KEY;
+	NSString *access_token_secret = ACCESS_TOKEN_SECRET;
 	
-	NSString *person_id = @"";
-	NSString *application_id = @"";
+	NSString *person_id = PERSON_ID;
+	NSString *application_id = APPLICATION_ID;
 	
 	if (myAppIsOffsite) {
 		
-		MSOffsiteContext *context = [MSOffsiteContext contextWithConsumerKey:consumer_key 
-														  consumerSecret:consumer_secret tokenKey:access_token_key tokenSecret:access_token_secret] ;
-		[context setUrlScheme:@"myspaceid"];//CONSIDER USING A UNIQUE UrlScheme
-		
+		MSOffsiteContext *context = [MSOffsiteContext contextWithConsumerKey:consumer_key consumerSecret:consumer_secret tokenKey:access_token_key tokenSecret:access_token_secret urlScheme:application_scheme];
+				
 		self.personId = person_id;
 		self.appId = application_id;
 		self.meSelector = MS_SELECTOR_ME;
 		return context;
 	}
 	else {
-		MSOnsiteContext *context = [MSOnsiteContext contextWithConsumerKey:access_token_key  
-														consumerSecret:access_token_secret] ;
-		[context setUrlScheme:@"myspaceid"];//CONSIDER USING A UNIQUE UrlScheme
+		MSOnsiteContext *context = [MSOnsiteContext contextWithConsumerKey:access_token_key consumerSecret:access_token_secret urlScheme:application_scheme];
 		
 		self.personId = person_id;
 		self.appId = application_id;

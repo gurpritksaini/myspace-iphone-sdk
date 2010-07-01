@@ -13,8 +13,7 @@
 
 @implementation MSOnsiteContext
 
-+ (MSOnsiteContext*) contextWithConsumerKey:(NSString*) consumerKey
-						 consumerSecret:(NSString*) consumerSecret
++ (MSOnsiteContext*) contextWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret urlScheme:(NSString*) urlScheme
 {
 	MSOnsiteContext *context = [[[MSOnsiteContext alloc] init] autorelease];
 	context.consumerKey = consumerKey;
@@ -22,7 +21,7 @@
 	context.accessToken = nil;
 	context.oauthKey = nil;
 	context.oauthSecret = nil;
-	context.urlScheme = @"myspaceid";
+	context.urlScheme = urlScheme;
 	return context;
 }
 -(id) init

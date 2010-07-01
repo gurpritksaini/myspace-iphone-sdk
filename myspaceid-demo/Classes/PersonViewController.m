@@ -4,7 +4,7 @@
 //
 //  Copyright MySpace, Inc. 2010. All rights reserved.
 //
-
+#import "MySpaceConstants.h"
 #import "PersonViewController.h"
 #import "MSApi.h"
 #import "SBJSON.h"
@@ -32,16 +32,14 @@
 		
 }
 
-////**********************************************************************
-//NEED TO UPDATE THIS METHOD BEFORE RUNNING
-////**********************************************************************
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSString *consumerKey = @"a94b8e4544394d54bd04c03d0a9c77f6";
-	NSString *consumerSecret = @"77b6cac8889c41dd840dd80bb04f1b0e1322cda7927d4b8ab3e24e5138f28586";
+	NSString *consumer_key = CONSUMER_KEY;
+	NSString *consumer_secret = CONSUMER_SECRET;
+	NSString *application_scheme = APPLICATION_SCHEME;
+	
 
-	self.mySpace = [MSApi sdkWith:consumerKey consumerSecret:consumerSecret 
-						  accessKey:nil accessSecret:nil isOnsite:false urlScheme:@"myspaceid" delegate:self];
+	self.mySpace = [MSApi sdkWith:consumer_key consumerSecret:consumer_secret accessKey:nil accessSecret:nil isOnsite:false urlScheme:application_scheme delegate:self];
 	
 	NSString *access_token_key = mySpace.accessKey;
 	NSString *access_token_secret = mySpace.accessSecret;

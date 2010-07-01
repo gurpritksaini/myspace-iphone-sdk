@@ -82,13 +82,13 @@
 		return context;
 	if(isOnsite){
 		context= [MSOnsiteContext contextWithConsumerKey:consumerKey 
-															  consumerSecret:consumerSecret];
+										  consumerSecret:consumerSecret urlScheme:urlScheme];
 		[context retain];
 	}
 	else {
 		context= [MSOffsiteContext contextWithConsumerKey:consumerKey 
 																 consumerSecret:consumerSecret 
-																tokenKey:accessKey tokenSecret:accessSecret];
+												 tokenKey:accessKey tokenSecret:accessSecret urlScheme:urlScheme];
 		[context retain];
 	}
 	if(delegate)

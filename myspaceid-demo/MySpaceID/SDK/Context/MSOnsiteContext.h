@@ -15,8 +15,6 @@
 	OAConsumer *consumer;
 }
 
-+ (MSOnsiteContext*) contextWithConsumerKey:(NSString*) consumerKey
-						 consumerSecret:(NSString*) consumerSecret;
-
++ (MSOnsiteContext*) contextWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret urlScheme:(NSString *) urlScheme;
 
 @end

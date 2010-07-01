@@ -57,6 +57,7 @@
 		E96410EC11AF58F0001270F4 /* doubleicon.png in Resources */ = {isa = PBXBuildFile; fileRef = E96410E711AF58F0001270F4 /* doubleicon.png */; };
 		E96410ED11AF58F0001270F4 /* singleicon.png in Resources */ = {isa = PBXBuildFile; fileRef = E96410E811AF58F0001270F4 /* singleicon.png */; };
 		E96410EE11AF58F0001270F4 /* toolicon.png in Resources */ = {isa = PBXBuildFile; fileRef = E96410E911AF58F0001270F4 /* toolicon.png */; };
+		E97D64AE11DD600D0094BFE1 /* MySpaceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D64AD11DD600D0094BFE1 /* MySpaceConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,7 +134,6 @@
 		4688D9CF117FC93000B04129 /* MSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSConstants.m; sourceTree = "<group>"; };
 		4688DB05117FD51800B04129 /* MySpaceID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MySpaceID-Info.plist"; sourceTree = "<group>"; };
 		4688DB90117FD7C500B04129 /* MySpaceID.Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpaceID.Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		46A8E9B11180FEFA00C050F3 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		46AAC78F1134AA9F005C3CED /* UnitTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTestController.h; sourceTree = "<group>"; };
 		46AAC7901134AA9F005C3CED /* UnitTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTestController.m; sourceTree = "<group>"; };
 		46AAC7911134AA9F005C3CED /* UnitTestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnitTestController.xib; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 		E96410E711AF58F0001270F4 /* doubleicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doubleicon.png; path = Icons/doubleicon.png; sourceTree = "<group>"; };
 		E96410E811AF58F0001270F4 /* singleicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = singleicon.png; path = Icons/singleicon.png; sourceTree = "<group>"; };
 		E96410E911AF58F0001270F4 /* toolicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolicon.png; path = Icons/toolicon.png; sourceTree = "<group>"; };
+		E97D64AC11DD600D0094BFE1 /* MySpaceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpaceConstants.h; sourceTree = "<group>"; };
+		E97D64AD11DD600D0094BFE1 /* MySpaceConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpaceConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,8 @@
 				46704E921150A46900AD48D3 /* PersonViewController.h */,
 				46704E931150A46900AD48D3 /* PersonViewController.m */,
 				46704E941150A46900AD48D3 /* PersonViewController.xib */,
+				E97D64AC11DD600D0094BFE1 /* MySpaceConstants.h */,
+				E97D64AD11DD600D0094BFE1 /* MySpaceConstants.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -223,7 +227,6 @@
 				E96410DF11AF58E3001270F4 /* Default.png */,
 				E96410E011AF58E3001270F4 /* Movie.m4v */,
 				E96410E111AF58E3001270F4 /* snowleopard.jpeg */,
-				46A8E9B11180FEFA00C050F3 /* README */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* MySpaceID_Demo-Info.plist */,
 				461D4005114C528900B9743E /* unitTests.plist */,
@@ -475,6 +478,7 @@
 				467A5A441152C4B000705691 /* MSSecurityContext.m in Sources */,
 				467A5A451152C4B000705691 /* XPathQuery.m in Sources */,
 				4688D9D0117FC93000B04129 /* MSConstants.m in Sources */,
+				E97D64AE11DD600D0094BFE1 /* MySpaceConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,8 @@
 + (MSOffsiteContext*) contextWithConsumerKey:(NSString*) consumerKey
 						  consumerSecret:(NSString*) consumerSecret
 						  tokenKey:(NSString*) oauthKey
-						  tokenSecret: (NSString*) oauthSecret;
+						  tokenSecret: (NSString*) oauthSecret
+						  urlScheme:(NSString*) urlScheme;
 - (void) getRequestToken;
 - (void) getAccessToken;
 - (void) logOut;

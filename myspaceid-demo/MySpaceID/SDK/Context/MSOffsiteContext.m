@@ -16,16 +16,18 @@
 @implementation MSOffsiteContext
 
 + (MSOffsiteContext*) contextWithConsumerKey:(NSString*) consumerKey
-						           consumerSecret:(NSString*) consumerSecret
-							 tokenKey:(NSString*) oauthKey
-							 tokenSecret: (NSString*) oauthSecret
+							consumerSecret:(NSString*) consumerSecret
+							tokenKey:(NSString*) oauthKey
+							tokenSecret:(NSString*) oauthSecret
+							urlScheme:(NSString*) urlScheme
 {
 	MSOffsiteContext *context = [[[MSOffsiteContext alloc] init] autorelease];
 	context.consumerKey = consumerKey;
 	context.consumerSecret = consumerSecret;
 	context.oauthKey = oauthKey;
 	context.oauthSecret = oauthSecret;
-	context.urlScheme = @"myspaceid";
+	context.urlScheme = urlScheme;
+	
 	if(context.oauthKey == nil)
 	{
 		NSString *accessTokenExists = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessTokenKey"];
