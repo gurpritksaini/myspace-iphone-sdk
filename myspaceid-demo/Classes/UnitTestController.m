@@ -61,22 +61,22 @@
 #pragma mark --Unit Test Helper Methods--
 
 - (MSSecurityContext*) setupContext{
-	BOOL myAppIsOffsite = YES; 
+	BOOL myAppIsOffsite = YES;
 
 	NSString *application_scheme = APPLICATION_SCHEME;
 	NSString *consumer_key = CONSUMER_KEY;
 	NSString *consumer_secret = CONSUMER_SECRET;
-	
+
 	NSString *access_token_key = ACCESS_TOKEN_KEY;
 	NSString *access_token_secret = ACCESS_TOKEN_SECRET;
-	
+
 	NSString *person_id = PERSON_ID;
 	NSString *application_id = APPLICATION_ID;
-	
+
 	if (myAppIsOffsite) {
-		
+
 		MSOffsiteContext *context = [MSOffsiteContext contextWithConsumerKey:consumer_key consumerSecret:consumer_secret tokenKey:access_token_key tokenSecret:access_token_secret urlScheme:application_scheme];
-				
+
 		self.personId = person_id;
 		self.appId = application_id;
 		self.meSelector = MS_SELECTOR_ME;
@@ -84,12 +84,12 @@
 	}
 	else {
 		MSOnsiteContext *context = [MSOnsiteContext contextWithConsumerKey:access_token_key consumerSecret:access_token_secret urlScheme:application_scheme];
-		
+
 		self.personId = person_id;
 		self.appId = application_id;
 		//Onsite applications can not use @ME selectors unless accompanied with a xoauth_requestor_id string paramater.
 		//To do this, just add an xoauth_requestor_id parameter into the queryParams dictionary object of whatever request you are making.
-		self.meSelector = person_id; 
+		self.meSelector = person_id;
 		return context;
 	}
 }
@@ -97,7 +97,7 @@
 - (void) fireUnitTest:(NSString*)unitTestName{
 	NSAutoreleasePool *pool = [ [ NSAutoreleasePool alloc ] init ];
 	NSDictionary *progress = [unitTestProgress objectForKey:unitTestName];
-	
+
 	SEL unitTestFunctionSelector = NSSelectorFromString(unitTestName);
 	NSMethodSignature * sig = nil;
 	sig = [[self class] instanceMethodSignatureForSelector:unitTestFunctionSelector];
@@ -105,11 +105,11 @@
 	myInvocation = [NSInvocation invocationWithMethodSignature:sig];
 	[myInvocation setTarget:self];
 	[myInvocation setSelector:unitTestFunctionSelector];
-	BOOL result = false;	
-	[myInvocation retainArguments];	
+	BOOL result = false;
+	[myInvocation retainArguments];
 	[myInvocation invoke];
 	[myInvocation getReturnValue:&result];
-	
+
 	[progress setValue:@"false" forKey:@"active"];
 	if(result){
 		[progress setValue:@"Pass" forKey:@"results"];
@@ -123,17 +123,17 @@
 }
 
 - (void) reloadTheTable{
-	
+
 	[table reloadData];
-	
-	
+
+
 }
 
 - (void) runUnitTest:(NSString*)unitTestName{
-	
+
 	NSDictionary *progress = [unitTestProgress objectForKey:unitTestName];
 	[progress setValue:@"true" forKey:@"active"];
-	
+
 	[self reloadTheTable];
 	[NSThread detachNewThreadSelector: @selector(fireUnitTest:) toTarget:self withObject:unitTestName];
 	[self reloadTheTable];
@@ -159,11 +159,11 @@ for(id key in self.frameworks)
 
 #pragma mark --OpenSocial 0.9 Tests--
 - (BOOL) OpenSocial09_getPerson{
-	
+
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getPerson");
 		NSString *dataString = [roaApi getPerson:self.meSelector queryParameters:nil ];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -171,29 +171,29 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_getPerson: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getPerson Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getFriends{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getFriends");
 		NSString *dataString = [roaApi getFriends:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -201,18 +201,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_getFriends: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getFriends Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -223,7 +223,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getPersonWithKeys");
 		NSMutableArray *keysArray = [NSMutableArray new] ;
 		[keysArray addObject:@"age"];
@@ -238,7 +238,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -248,7 +248,7 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getPersonWithKeys Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -259,18 +259,18 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getOnlineFriends");
-		NSMutableDictionary *params = [roaApi makeQueryDictionary:nil count:nil filterBy:@"networkpresence"  
+		NSMutableDictionary *params = [roaApi makeQueryDictionary:nil count:nil filterBy:@"networkpresence"
 														 filterOp:@"equals" filterValue:@"online" format:@"xml" statusId:nil postedDate:nil
 													   startIndex:nil updatedSince:nil];
-		NSString *dataString = [roaApi getFriends:self.meSelector queryParameters:params];	
+		NSString *dataString = [roaApi getFriends:self.meSelector queryParameters:params];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -280,19 +280,19 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getOnlineFriends Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSocial09_getAlbums{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getAlbums");
 		NSString *dataString = [roaApi getAlbums:personId queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -300,7 +300,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -326,7 +326,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_updateAlbum");
 		if(self.albumId == nil)
 			[self OpenSocial09_getAlbums];
@@ -337,7 +337,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -347,18 +347,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getAlbums Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getMediaItems{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getMediaItems");
 		if(self.albumId == nil)
 			[self OpenSocial09_getAlbums];
@@ -369,7 +369,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -386,18 +386,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getMediaItems Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getMediaItem{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getMediaItem");
 		if(self.photoId == nil)
 			[self OpenSocial09_getMediaItems];
@@ -409,30 +409,30 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
-		
+
 		NSLog(@"HTTP Output for OpenSocial09_getMediaItem: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getMediaItem Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSocial09_addPhoto{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_addPhoto");
 		if(self.albumId == nil)
 			[self OpenSocial09_getAlbums];
@@ -448,30 +448,30 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_addPhoto: %@", dataString);
-		
+
 		testResult = ([roaApi responseStatusCode] == 201 && dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_addPhoto Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSocial09_getSupportedVideoCategories{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getSupportedVideoCategories");
 		NSString *dataString =  [roaApi getSupportedVideoCategories:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -479,7 +479,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -489,7 +489,7 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getSupportedVideoCategories Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -501,7 +501,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getVideos");
 		NSString *dataString =  [roaApi getMediaItems:personId albumId:MS_SELECTOR_VIDEOS queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -509,18 +509,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_getVideos: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getVideos Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -531,7 +531,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_addVideo");
 		if(self.albumId == nil)
 			[self OpenSocial09_getAlbums];
@@ -550,63 +550,63 @@ for(id key in self.frameworks)
 		NSURL *videoURL = [NSURL fileURLWithPath:moviePath];
 		NSData *webData = [NSData dataWithContentsOfURL:videoURL];
 		NSArray *tags = [NSArray arrayWithObject:@"mobile-upload"];
-		dataString =[roaApi addVideo:self.meSelector albumId:albumId caption:@"my cool vid" 
-						   videoData:webData videoType:@"video/quicktime" description:@"here is a great video" 
+		dataString =[roaApi addVideo:self.meSelector albumId:albumId caption:@"my cool vid"
+						   videoData:webData videoType:@"video/quicktime" description:@"here is a great video"
 								tags:tags msCategories:categoryId language:nil queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		[json release];
 		NSLog(@"HTTP Output for OpenSocial09_addVideo: %@", dataString);
-		
+
 		testResult = ([roaApi responseStatusCode] == 201 && dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_addVideo Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSocial09_updateMediaItem{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_updateMediaItem");
 		if(self.photoId == nil)
 			[self OpenSocial09_getMediaItems];
 		NSAssert((self.photoId !=nil), @"No PhotoId available to run test");
-		NSString *dataString = [roaApi updateMediaItem:personId 
-											   albumId:self.albumId mediaItemId:self.photoId 
+		NSString *dataString = [roaApi updateMediaItem:personId
+											   albumId:self.albumId mediaItemId:self.photoId
 												 title:@"testTitle" queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_updateMediaItem: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_updateMediaItem Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -617,19 +617,19 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getMediaItemComments");
 		if(self.photoId == nil)
 			[self OpenSocial09_getMediaItems];
 		NSAssert((self.photoId !=nil), @"No PhotoId available to run test");
-		NSString *dataString = [roaApi getMediaItemComments:self.personId 
+		NSString *dataString = [roaApi getMediaItemComments:self.personId
 													albumId:self.albumId mediaItemId:self.photoId queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -639,18 +639,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getMediaItemComments Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getActivities{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getActivities");
 		NSString *dataString = [roaApi getActivities:self.meSelector appId:nil queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -658,18 +658,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_getActivities: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 200 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getActivities Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -679,9 +679,9 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_createActivity");
-		NSDictionary *contentDict = [NSDictionary	dictionaryWithObjects:[NSArray arrayWithObjects:@"content", @"testContent", nil] 
+		NSDictionary *contentDict = [NSDictionary	dictionaryWithObjects:[NSArray arrayWithObjects:@"content", @"testContent", nil]
 																forKeys:[NSArray arrayWithObjects:@"key", @"value", nil]];
 		NSArray *msParameters = [NSArray arrayWithObject:contentDict];
 		NSString *dataString = [roaApi createActivity:@"template1" title:@"testTitle" body:@"testBody"
@@ -691,18 +691,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for OpenSocial09_createActivity: %@", dataString);
 		testResult = ([roaApi responseStatusCode] == 201 && dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_createActivity Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -712,7 +712,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getFriendActivities");
 		NSMutableArray *keysArray = [NSMutableArray new];
 		[keysArray addObject:@"@all"];
@@ -726,7 +726,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -736,18 +736,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getFriendActivities Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getAppActivities{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getAppActivities");
 		NSString *dataString = [roaApi	 getFriendActivities:self.meSelector appId:MS_SELECTOR_APP queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -755,7 +755,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -765,18 +765,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getAppActivities Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_addAppData{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_addAppData");
 		NSArray *fieldKeys = [NSArray arrayWithObject:@"test"];
 		NSArray *fieldValues = [NSArray arrayWithObject:@"testValue"];
@@ -787,7 +787,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -797,31 +797,31 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_addAppData Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getAppDataWithKeys{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getAppDataWithKeys");
 		NSArray *fieldKeys = [NSArray arrayWithObject:@"test"];
 		NSMutableDictionary *params = [roaApi makeQueryDictionary:fieldKeys count:nil filterBy:nil filterOp:nil filterValue:nil format:nil statusId:nil postedDate:nil
 													   startIndex:nil updatedSince:nil];
-		
-		NSString *dataString = [roaApi getAppData:self.meSelector selector:MS_SELECTOR_SELF appId:self.appId 
+
+		NSString *dataString = [roaApi getAppData:self.meSelector selector:MS_SELECTOR_SELF appId:self.appId
 								  queryParameters:params];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -831,28 +831,28 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getAppDataWithKeys Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_deleteAppData{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_deleteAppData");
 		NSArray *fieldKeys = [NSArray arrayWithObject:@"test"];
-		NSString *dataString = [roaApi deleteAppData:self.meSelector selector:MS_SELECTOR_SELF 
+		NSString *dataString = [roaApi deleteAppData:self.meSelector selector:MS_SELECTOR_SELF
 											   appId:self.appId keys:fieldKeys queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -862,22 +862,22 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_deleteAppData Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getGroups{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getGroups");
 		NSString *dataString = [roaApi getGroups:personId queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
-		
+
 		SBJSON	*json = [SBJSON new];
 		id jsonObj = [json objectWithString:dataString];
 		NSAssert(([jsonObj objectForKey:@"entry"] !=nil), @"'entry' property was not found in Json response. Required to run test.");
@@ -888,12 +888,12 @@ for(id key in self.frameworks)
 			self.groupId = [[firstGroup objectForKey:@"group"] objectForKey:@"id"];
 		}
 		[json release];
-		
+
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -903,7 +903,7 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getGroups Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -914,7 +914,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getGroup");
 		if(self.groupId == nil)
 			[self OpenSocial09_getGroups];
@@ -925,7 +925,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -935,19 +935,19 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getGroup Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSocial09_getSupportedMoods{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getSupportedMoods");
 		NSString *dataString = [roaApi	getSupportedMoods:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -955,7 +955,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -965,18 +965,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getSupportedMoods Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getMoodStatus{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getMoodStatus");
 		NSString *dataString = [roaApi	getPersonMoodStatus:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -984,7 +984,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -994,18 +994,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getMoodStatus Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getTopFriendsMoodStatus{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getTopFriendsMoodStatus");
 		NSMutableDictionary *params = [roaApi makeQueryDictionary:nil count:nil filterBy:@"@topfriends" filterOp:nil filterValue:nil format:nil statusId:nil postedDate:nil
 													   startIndex:nil updatedSince:nil];
@@ -1015,7 +1015,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1025,20 +1025,20 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getTopFriendsMoodStatus Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_updateMoodStatus{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_updateMoodStatus");
-		NSString *dataString = [roaApi updatePersonMoodStatus:self.meSelector moodName:@"Excited" 
+		NSString *dataString = [roaApi updatePersonMoodStatus:self.meSelector moodName:@"Excited"
 													   status:@"Just updated my status using the iPhone SDK!"
 													 latitude:nil longitude:nil queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -1046,7 +1046,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1056,18 +1056,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_updateMoodStatus Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getMoodStatusComments{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSString *dataString = [roaApi	getPersonMoodStatus:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		SBJSON *json = [[SBJSON alloc] init];
@@ -1081,7 +1081,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1092,18 +1092,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getMoodStatusComments Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_updateMoodStatusComments{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSString *dataString = [roaApi	getPersonMoodStatus:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		SBJSON *json = [[SBJSON alloc] init];
@@ -1111,14 +1111,14 @@ for(id key in self.frameworks)
 		NSAssert(([jsonObj objectForKey:@"statusId"] !=nil), @"'statusId' was expected in the Json object. Test cannot continue.");
 		NSString *moodStatusId = [jsonObj objectForKey:@"statusId"];
 		NSLog(@"Testing OpenSocial09_updateMoodStatusComments");
-		dataString = [roaApi addStatusMoodComment:personId 
+		dataString = [roaApi addStatusMoodComment:personId
 										 statusId:moodStatusId body:@"the status comment" queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1129,28 +1129,28 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_updateMoodStatusComments Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_sendNotification{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_sendNotification");
 		NSArray *recipients = [NSArray arrayWithObject:personId];
-		NSString *dataString = [roaApi sendNotification:self.meSelector recipientIds:recipients mediaItems:nil 
+		NSString *dataString = [roaApi sendNotification:self.meSelector recipientIds:recipients mediaItems:nil
 									 templateParameters:nil queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([roaApi responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1160,18 +1160,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_sendNotification Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSocial09_getProfileComments{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];		
+		MSRoaApi *roaApi = [MSRoaApi apiWithContext:context];
 		NSLog(@"Testing OpenSocial09_getProfileComments");
 		NSString *dataString = [roaApi getProfileComments:self.meSelector queryParameters:nil];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -1179,7 +1179,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[roaApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[roaApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1189,12 +1189,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getProfileComments Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 #pragma mark --OpenSearch Tests--
@@ -1202,7 +1202,7 @@ for(id key in self.frameworks)
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];	
+		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];
 		NSLog(@"Testing OpenSearch_searchPeople");
 		NSString *dataString = [searchApi searchPeople:@"donny mack"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -1210,7 +1210,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[searchApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[searchApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1220,18 +1220,18 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSearch_searchPeople Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) OpenSearch_searchImages{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];		
+		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];
 		NSLog(@"Testing OpenSearch_searchImages");
 		NSString *dataString = [searchApi searchImages:@"baseball"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -1239,7 +1239,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[searchApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[searchApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1249,19 +1249,19 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSearch_searchImages Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) OpenSearch_searchVideos{
 	BOOL testResult = false;
 	@try {
 		MSSecurityContext *context = [self setupContext];
-		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];		
+		MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:context];
 		NSLog(@"Testing OpenSearch_searchVideos");
 		NSString *dataString = [searchApi searchVideos:@"football"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
@@ -1269,7 +1269,7 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[searchApi httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[searchApi httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1279,12 +1279,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSearch_searchVideos Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 
@@ -1302,18 +1302,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getCurrentUser: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getCurrentUser Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1331,18 +1331,18 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getFriendship: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getFriendship Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1355,25 +1355,25 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesApplications");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_APPLICATION_INSTALLS extensions:@"subject" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_APPLICATION_INSTALLS extensions:@"subject"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getActivitiesApplications: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesApplicationInstalls Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1386,30 +1386,30 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesApplications");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_APPLICATION_USE extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_APPLICATION_USE extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
-		
+
 		NSLog(@"HTTP Output for V1_getActivitiesApplications: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesApplicationUse Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesEventHosting{
 	BOOL testResult = false;
@@ -1417,25 +1417,25 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesEventHosting");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_POST extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_POST extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getActivitiesEventHosting: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesEventHosting Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1448,14 +1448,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesEventAttending");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_ATTENDING extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_ATTENDING extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1465,12 +1465,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesEventAttending Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesEventBandShow{
 	BOOL testResult = false;
@@ -1478,14 +1478,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesEventBandShow");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_BANDSHOWS extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_EVENT_BANDSHOWS extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1495,12 +1495,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesEventBandShow Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesMusicSongPost{
 	BOOL testResult = false;
@@ -1508,17 +1508,17 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesMusicSongPost");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_SONGPOST extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_SONGPOST extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		NSLog(@"HTTP Output for V1_getActivitiesMusicSongPost: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
-		
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesMusicSongPost Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1530,14 +1530,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesMusicProfileSongAdd");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_PROFILE_SONG_ADD extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_PROFILE_SONG_ADD extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1547,12 +1547,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesMusicProfileSongAdd Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesMusicPlaylistEdit{
 	BOOL testResult = false;
@@ -1560,14 +1560,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesMusicPlaylistEdit");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_PLAYLIST_EDIT extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_MUSIC_PLAYLIST_EDIT extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1577,12 +1577,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesMusicPlaylistEdit Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesNotesStatusUpdates{
 	BOOL testResult = false;
@@ -1590,14 +1590,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesNotesStatusUpdates");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_STATUS_UPDATES extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_STATUS_UPDATES extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1607,12 +1607,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesNotesStatusUpdates Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesNotesBlogPost{
 	BOOL testResult = false;
@@ -1620,14 +1620,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesNotesBlogPost");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_BLOG_POST extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_BLOG_POST extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1637,12 +1637,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesNotesBlogPost Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesNotesForumPost{
 	BOOL testResult = false;
@@ -1650,14 +1650,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesNotesForumPost");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_FORUM_POST extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_NOTES_FORUM_POST extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1667,12 +1667,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesNotesForumPost Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) V1_getActivitiesPersonFriendAdd{
@@ -1681,14 +1681,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesPersonFriendAdd");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_FRIEND_ADD extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_FRIEND_ADD extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1698,12 +1698,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesPersonFriendAdd Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesPersonGroupJoin{
 	BOOL testResult = false;
@@ -1711,14 +1711,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesPersonGroupJoin");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_GROUP_JOIN extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_GROUP_JOIN extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1728,11 +1728,11 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesPersonGroupJoin Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
-	}	
+	}
 }
 - (BOOL) V1_getActivitiesPersonFriendCategoryAdd{
 	BOOL testResult = false;
@@ -1740,14 +1740,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesPersonFriendCategoryAdd");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_FRIEND_CATEGORY_ADD extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PEOPLE_FRIEND_CATEGORY_ADD extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1757,7 +1757,7 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"OpenSocial09_getAlbums Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
@@ -1770,14 +1770,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesPhotoAdd");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PHOTO_ADD extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PHOTO_ADD extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1787,12 +1787,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesPhotoAdd Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) V1_getActivitiesPhotoTagged{
@@ -1801,30 +1801,30 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesPhotoTagged");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PHOTO_TAGGED extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_PHOTO_TAGGED extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
-		
+
 		NSLog(@"HTTP Output for V1_getActivitiesPhotoTagged: %@", dataString);
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesPhotoTagged Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) V1_getActivitiesVideoShared{
@@ -1833,29 +1833,29 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesVideoShared");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_VIDEO_SHARED extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_VIDEO_SHARED extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getActivitiesVideoShared: %@", dataString);
-		
+
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesVideoShared Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 - (BOOL) V1_getActivitiesVideoAdd{
 	BOOL testResult = false;
@@ -1863,14 +1863,14 @@ for(id key in self.frameworks)
 		MSSecurityContext *context = [self setupContext];
 		MSRestV1 *v1Api = [MSRestV1 apiWithContext: context] ;
 		NSLog(@"Testing V1_getActivitiesVideoAdd");
-		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_VIDEO_ADD extensions:@"All" 
+		NSString *dataString = [v1Api getActivities:personId activityTypes: MS_ACTIVITY_TYPE_VIDEO_ADD extensions:@"All"
 										  composite:nil culture:nil datetime:nil pageSize:@"1"];
 		NSAssert((dataString !=nil), @"No data returned in request.");
 		if([v1Api responseStatusCode] > 201) //Output Response headers if there was an error
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
@@ -1880,12 +1880,12 @@ for(id key in self.frameworks)
 	@catch (NSException * e) {
 		NSLog(@"V1_getActivitiesVideoAdd Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 - (BOOL) V1_getIndicators{
@@ -1901,23 +1901,23 @@ for(id key in self.frameworks)
 		{
 			NSLog(@"HTTP Response Headers");
 			for (id key in [[v1Api httpResponse] allHeaderFields]) {
-				
+
 				NSLog(@"Header: %@, Value: %@", key, [[[v1Api httpResponse] allHeaderFields] objectForKey:key]);
 			}
 		}
 		NSLog(@"HTTP Output for V1_getActivitiesVideoAdd: %@", dataString);
-		
+
 		testResult = ([v1Api responseStatusCode] == 200 || dataString);
 	}
 	@catch (NSException * e) {
 		NSLog(@"V1_getIndicators Exception: %@", [e reason]);
 		testResult = false;
-		
+
 	}
 	@finally {
 		return testResult;
 	}
-	
+
 }
 
 
@@ -1936,7 +1936,7 @@ for(id key in self.frameworks)
 }
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
+
 	NSUInteger section = [indexPath section];
 	NSUInteger row = [indexPath row];
 	NSString *key = [keys objectAtIndex:section];
@@ -1944,17 +1944,17 @@ for(id key in self.frameworks)
 	NSString *unitTestName = [NSString stringWithFormat:@"%@_%@", key, [nameSection objectAtIndex:row]];
 
 	static NSString *CellIdentifier = @"UnitTestTableViewCellIdentifier";
-		
+
 	UnitTestTableViewCell *cell = (UnitTestTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"UnitTestTableViewCell"
 													 owner:self options:nil];
 		cell = [nib objectAtIndex:0];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	} 
+	}
 	[cell.labelTestDescription setText:[nameSection objectAtIndex:row]];
 	NSDictionary *progress = [unitTestProgress objectForKey:unitTestName];
-	
+
 	if ([progress valueForKey:@"active"] == @"true") {
 		[cell.testActivity startAnimating];
 	}
@@ -1967,10 +1967,10 @@ for(id key in self.frameworks)
 		[cell.labelTestResults setTextColor:[UIColor greenColor]];
 	else
 		 [cell.labelTestResults setTextColor:[UIColor redColor]];
-		 
+
 	[cell.labelTestResults setText:results];
 
-	
+
 	return cell;
 }
 
@@ -1981,20 +1981,20 @@ for(id key in self.frameworks)
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)index{
-	
+
 	NSUInteger section = [index section];
 	NSUInteger row = [index row];
 	NSString *key = [keys objectAtIndex:section];
 	NSArray *nameSection = [frameworks objectForKey:key];
 	NSString *unitTestName = [NSString stringWithFormat:@"%@_%@", key, [nameSection objectAtIndex:row]];
 	[self runUnitTest:unitTestName];
-	
+
 }
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
+
 	// Release any cached data, images, etc that aren't in use.
 }
 

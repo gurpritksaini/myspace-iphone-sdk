@@ -69,7 +69,7 @@
 
 - (NSString*) makeRawV1Request:(NSString*)uri queryParameters:(NSDictionary*)queryParams requestMethod:(NSString*)requestMethod
 				   requestBody:(NSData*)requestBody contentType:(NSString*)contentType;
-- (NSMutableDictionary*) makeQueryDictionary:(NSArray*) fields 
+- (NSMutableDictionary*) makeQueryDictionary:(NSArray*) fields
 									  format:(NSString*)format activityTypes:(NSString*)activityTypes extensions:(NSString*)extensions
 								   composite:(NSString*)composite culture:(NSString*)culture datetime:(NSString*)dateTime pageSize:(NSString*)pageSize;
 

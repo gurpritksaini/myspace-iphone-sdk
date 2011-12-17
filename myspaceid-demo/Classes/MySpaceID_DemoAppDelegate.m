@@ -13,9 +13,9 @@
 @synthesize rootController;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
-    // Override point for customization after app launch    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+
+    // Override point for customization after app launch
 	//UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[DemoViewController alloc] init]];
 	[window addSubview:rootController.view];
     [window makeKeyAndVisible];
@@ -31,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     if (!url) {  return NO; }
-	
+
     NSString *URLString = [url absoluteString];
     [[NSUserDefaults standardUserDefaults] setObject:URLString forKey:@"url"];
     [[NSUserDefaults standardUserDefaults] synchronize];

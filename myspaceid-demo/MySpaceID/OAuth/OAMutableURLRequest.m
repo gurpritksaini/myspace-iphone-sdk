@@ -123,8 +123,8 @@
 
 
 - (void) prepare {
-	
-	
+
+
     // sign
     NSString* baseString = [self signatureBaseString];
     NSString* tokenSecret = token.secret.length == 0 ? @"" : token.secret;
@@ -138,7 +138,7 @@
         oauthToken = [NSString stringWithFormat:@"oauth_token=\"%@\", ", token.key.encodedURLParameterString];
     }
 
-	
+
     NSString* oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", %@oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"",
                              realm.encodedURLParameterString,
                              consumer.key.encodedURLParameterString,

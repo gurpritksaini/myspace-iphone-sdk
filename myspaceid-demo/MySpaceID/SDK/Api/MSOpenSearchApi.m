@@ -34,14 +34,14 @@
 		methodName = nil;
 		responseData = nil;
 		httpResponse = nil;
-		
+
 	}
-	
+
 	return self;
 }
 
 - (void) dealloc{
-	
+
 	[context release];
 	[methodName release];
 	self.responseData = nil;
@@ -68,8 +68,8 @@
 				 searchBy:(NSString*)searchBy gender:(NSString*)gender hasPhoto:(NSString*)hasPhoto minAge:(NSString*)minAge maxAge:(NSString*)maxAge
 				 location:(NSString*)location distance:(NSString*)distance latitude:(NSString*)latitude longitude:(NSString*)longitude culture:(NSString*)culture
 			  countryCode:(NSString*)countryCode{
-	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:searchBy gender:gender 
-											hasPhoto:hasPhoto minAge:minAge maxAge:maxAge location:location distance:distance latitude:latitude 
+	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:searchBy gender:gender
+											hasPhoto:hasPhoto minAge:minAge maxAge:maxAge location:location distance:distance latitude:latitude
 										   longitude:longitude culture:culture countryCode:countryCode sortBy:nil sortOrder:nil tag:nil videoMode:nil];
 	return [self searchPeople:searchTerms queryParameters:params];
 }
@@ -88,9 +88,9 @@
 }
 -(NSString*) searchImages:(NSString*)searchTerms format:(NSString*)format count:(NSString*)count startPage:(NSString*)startPage
 				  culture:(NSString*)culture sortBy:(NSString*)sortBy sortOrder:(NSString*)sortOrder{
-	
-	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:nil gender:nil 
-												   hasPhoto:nil minAge:nil maxAge:nil location:nil distance:nil latitude:nil 
+
+	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:nil gender:nil
+												   hasPhoto:nil minAge:nil maxAge:nil location:nil distance:nil latitude:nil
 												  longitude:nil culture:culture countryCode:nil sortBy:sortBy sortOrder:sortOrder tag:nil videoMode:nil];
 	return [self searchImages:searchTerms queryParameters:params];
 }
@@ -109,11 +109,11 @@
 }
 -(NSString*) searchVideos:(NSString*)searchTerms format:(NSString*)format count:(NSString*)count startPage:(NSString*)startPage
 				  culture:(NSString*)culture tag:(NSString*)tag videoMode:(NSString*)videoMode{
-	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:nil gender:nil 
-												   hasPhoto:nil minAge:nil maxAge:nil location:nil distance:nil latitude:nil 
+	NSMutableDictionary *params = [self makeQueryDictionary:format count:count startPage:startPage searchBy:nil gender:nil
+												   hasPhoto:nil minAge:nil maxAge:nil location:nil distance:nil latitude:nil
 												  longitude:nil culture:culture countryCode:nil sortBy:nil sortOrder:nil tag:tag videoMode:videoMode];
 	return [self searchImages:searchTerms queryParameters:params];
-	
+
 }
 
 #pragma mark --Helper Methods--
@@ -122,7 +122,7 @@
 searchBy:(NSString*)searchBy gender:(NSString*)gender hasPhoto:(NSString*)hasPhoto minAge:(NSString*)minAge maxAge:(NSString*)maxAge
 location:(NSString*)location distance:(NSString*)distance latitude:(NSString*)latitude longitude:(NSString*)longitude culture:(NSString*)culture
 countryCode:(NSString*)countryCode sortBy:(NSString*)sortBy sortOrder:(NSString*)sortOrder tag:(NSString*)tag videoMode:(NSString*)videoMode{
-	
+
 	NSMutableDictionary *queryParams = [[NSMutableDictionary new] autorelease];
 	if (format) {
 		[queryParams setValue:format forKey:@"format"];
@@ -197,12 +197,12 @@ countryCode:(NSString*)countryCode sortBy:(NSString*)sortBy sortOrder:(NSString*
 				amperSand = @"&";
 			queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@%@=%@", amperSand, key, [[queryParams objectForKey:key]encodedURLString ]]];
 		}
-		
+
 		if([queryString isEqualToString:@"?"])
 			queryString = @"";
 		NSURL *url = [NSURL URLWithString: [urlString stringByAppendingString:queryString]];
 		[context makeRequest:url method:requestMethod body:requestBody contentType:contentType delegate:self];
-		
+
 	}
 	NSString* dataAsString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
 
@@ -216,9 +216,9 @@ countryCode:(NSString*)countryCode sortBy:(NSString*)sortBy sortOrder:(NSString*
 	NSString *dataOutput = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	self.httpResponse = (NSHTTPURLResponse*)[ticket response];
 	self.responseStatusCode = [httpResponse statusCode];
-	NSLog(@"UrlRequest: %@, Http Status Code: %@, Http Response: %@",  
-		  [[[ticket response] URL] absoluteString], 
-		  [NSString stringWithFormat:@"%d", responseStatusCode], 
+	NSLog(@"UrlRequest: %@, Http Status Code: %@, Http Response: %@",
+		  [[[ticket response] URL] absoluteString],
+		  [NSString stringWithFormat:@"%d", responseStatusCode],
 		  dataOutput);
 	if (ticket.succeeded) {
 		self.responseData = data;
@@ -227,7 +227,7 @@ countryCode:(NSString*)countryCode sortBy:(NSString*)sortBy sortOrder:(NSString*
 	if(context.MSDelegate)
 	{
 		NSString* dataAsString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-		if ([context.MSDelegate respondsToSelector:@selector(api:didFinishMethod:withValue:withStatusCode:)]) { 
+		if ([context.MSDelegate respondsToSelector:@selector(api:didFinishMethod:withValue:withStatusCode:)]) {
 			[context.MSDelegate api:self didFinishMethod:self.methodName withValue:dataAsString withStatusCode:self.responseStatusCode];
 		}
 	}
@@ -238,13 +238,13 @@ countryCode:(NSString*)countryCode sortBy:(NSString*)sortBy sortOrder:(NSString*
 						 [error localizedDescription],
 						 [error localizedFailureReason]];
 	NSLog(@"%@", message);
-	
+
 	self.httpResponse = (NSHTTPURLResponse*)[ticket response];
 	self.responseStatusCode = [httpResponse statusCode];
-	
+
 	if(context.MSDelegate)
 	{
-		if ([context.MSDelegate respondsToSelector:@selector(api:didFailMethod:withError:)]) {     
+		if ([context.MSDelegate respondsToSelector:@selector(api:didFailMethod:withError:)]) {
 			[context.MSDelegate api:self didFailMethod:self.methodName withError:error];
 		}
 	}

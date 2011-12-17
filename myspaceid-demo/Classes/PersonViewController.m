@@ -27,9 +27,9 @@
 @synthesize lblLogin;
 
 - (void) loadStatus{
-	
+
 	[mySpace getPersonMoodStatus:personId queryParameters:nil];
-		
+
 }
 
 - (void)viewDidLoad {
@@ -37,32 +37,32 @@
 	NSString *consumer_key = CONSUMER_KEY;
 	NSString *consumer_secret = CONSUMER_SECRET;
 	NSString *application_scheme = APPLICATION_SCHEME;
-	
+
 
 	self.mySpace = [MSApi sdkWith:consumer_key consumerSecret:consumer_secret accessKey:nil accessSecret:nil isOnsite:false urlScheme:application_scheme delegate:self];
-	
+
 	NSString *access_token_key = mySpace.accessKey;
 	NSString *access_token_secret = mySpace.accessSecret;
-	
+
 	NSLog(@"AccessTokenKey %@ AccessTokenSecret %@", access_token_key, access_token_secret);
-	
+
 	NSString *returnUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
-	
+
 	if(returnUrl)
 	{
 		[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"url"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 		[mySpace getAccessToken];
 	}
-	
+
 	if([mySpace isLoggedIn])
 	{
 		self.loginButton.leftBarButtonItem = [[[UIBarButtonItem alloc]
-											   initWithTitle:@"Logout" 
-											   style:UIBarButtonItemStylePlain 
-											   target:self 
+											   initWithTitle:@"Logout"
+											   style:UIBarButtonItemStylePlain
+											   target:self
 											   action:@selector(logOut)] autorelease];
-		
+
 		[mySpace getPerson:MS_SELECTOR_ME queryParameters:nil];
 
 		statusTextField.hidden = false;
@@ -76,9 +76,9 @@
 	{
 		// Add a left button
 		self.loginButton.leftBarButtonItem = [[[UIBarButtonItem alloc]
-											   initWithTitle:@"Login" 
-											   style:UIBarButtonItemStylePlain 
-											   target:self 
+											   initWithTitle:@"Login"
+											   style:UIBarButtonItemStylePlain
+											   target:self
 											   action:@selector(logIn)] autorelease];
 		statusTextField.hidden = true;
 		profileImageView.hidden = true;
@@ -93,16 +93,16 @@
 	//update status code here.
 	NSString *newStatus = self.statusTextField.text;
 	[mySpace updatePersonMoodStatus:self.personId moodName:nil status:newStatus latitude:nil longitude:nil queryParameters:nil];
-	
+
 	[statusTextField resignFirstResponder];
-	
+
 }
 
 - (IBAction) uploadMedia : (id) sender{
-	
+
 	imagePickerController = [[UIImagePickerController alloc] init];
 	imagePickerController.delegate = self;
-	imagePickerController.sourceType = 
+	imagePickerController.sourceType =
 	UIImagePickerControllerSourceTypePhotoLibrary;
 	imagePickerController.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:imagePickerController.sourceType];
 	[self presentModalViewController:imagePickerController animated:YES];
@@ -116,24 +116,24 @@
 -(void) logIn
 {
 	[mySpace getRequestToken];
-	
+
 }
 
 -(void) logOut
 {
 	[mySpace endSession];
-	
+
 	for(UIView *view in self.view.subviews)
 	{
 		if(![view isKindOfClass:[UINavigationBar class]])
 			[view removeFromSuperview];
-		
+
 	}
 	// Add a left buttonˆ
 	self.loginButton.leftBarButtonItem = [[[UIBarButtonItem alloc]
-										   initWithTitle:@"Login" 
-										   style:UIBarButtonItemStylePlain 
-										   target:self 
+										   initWithTitle:@"Login"
+										   style:UIBarButtonItemStylePlain
+										   target:self
 										   action:@selector(logIn)] autorelease];
 }
 
@@ -165,16 +165,16 @@
 		id jsonObj = [json objectWithString: value];
 		NSString *currentStatus = [jsonObj objectForKey:@"status"];
 		self.statusLabel.text = currentStatus;
-		
+
 		[json release];
-	
+
 	}
 	else if(methodName == @"updatePersonMoodStatus"){
-	
+
 		[self loadStatus];
 	}
 	else if(methodName == @"addPhoto"){
-		
+
 		NSLog(@"%@", @"Photo Upload complete");
 	}
 	else if(methodName == @"addVideo"){
@@ -185,11 +185,11 @@
 		SBJSON *json = [SBJSON new];
 		id jsonObj = [json objectWithString:value];
 		NSString *categoryId = [[jsonObj objectAtIndex:0] objectForKey:@"id"];
-		
+
 		NSData *webData = [NSData dataWithContentsOfURL:videoURL];
 		NSArray *tags = [NSArray arrayWithObject:@"mobile-upload"];
-		[mySpace addVideo:MS_SELECTOR_ME albumId:albumId caption:@"awesome video" videoData:webData 
-				videoType:@"video/quicktime" description:@"check out my new video" tags:tags 
+		[mySpace addVideo:MS_SELECTOR_ME albumId:albumId caption:@"awesome video" videoData:webData
+				videoType:@"video/quicktime" description:@"check out my new video" tags:tags
 			 msCategories:categoryId language:nil queryParameters:nil];
 		[json release];
 	}
@@ -208,22 +208,22 @@
 	NSString *data = [mySpace getAlbums:personId queryParameters:nil];
 	SBJSON *json = [SBJSON new];
 	id jsonObj = [json objectWithString:data];
-	
-	albumId = [[[[jsonObj objectForKey:@"entry"] objectAtIndex:0] objectForKey:@"album"] objectForKey:@"id"];	
+
+	albumId = [[[[jsonObj objectForKey:@"entry"] objectAtIndex:0] objectForKey:@"album"] objectForKey:@"id"];
 	NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
 	if ([mediaType isEqualToString:@"public.image"]){
 		UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 		NSLog(@"found an image");
-		NSData *photoData = UIImageJPEGRepresentation(image, 1.0f);		
+		NSData *photoData = UIImageJPEGRepresentation(image, 1.0f);
 		[mySpace addPhoto:MS_SELECTOR_ME albumId:albumId caption:@"iPhone Pic" photoData:photoData imageType:@"image/jpg" queryParameters:nil];
 	}
 	else if ([mediaType isEqualToString:@"public.movie"]){
-		
+
 		videoURL = [[info objectForKey:UIImagePickerControllerMediaURL] retain];
 		NSLog(@"found a video");
 		[mySpace getSupportedVideoCategories:MS_SELECTOR_ME queryParameters:nil];
-		
-		
+
+
 	}
 	[json release];
 	[picker dismissModalViewControllerAnimated:YES];

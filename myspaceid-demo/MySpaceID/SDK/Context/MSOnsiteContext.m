@@ -31,7 +31,7 @@
 		request= nil;
 		consumer = nil;
 	}
-	
+
 	return self;
 }
 - (void) dealloc{
@@ -42,39 +42,39 @@
 
 - (void) makeRequest:(NSURL*)url method:(NSString*)method body:(NSString*) body delegate:(id<OAResponseDelegate>)delegate
 {
-	
+
 	NSData *bodyData = nil;
 	NSString *contentType = nil;
 	if(body)
 	{
 		bodyData = [body dataUsingEncoding:NSASCIIStringEncoding];
 		contentType = @"application/x-www-form-urlencoded";
-	} 
+	}
 	[self makeRequest:url method:method body:bodyData contentType:contentType delegate:delegate];
-	
+
 }
 
-- (void) makeRequest:(NSURL*)url method:(NSString*)method body:(NSData*) body  
+- (void) makeRequest:(NSURL*)url method:(NSString*)method body:(NSData*) body
 			 contentType:(NSString*) contentType delegate:(id<OAResponseDelegate>)delegate
-{	
+{
 	if (consumer)
 	{
 		[consumer release];
 		consumer = nil;
 	}
-	
+
 	if (request)
 	{
 		[request release];
 		request = nil;
 	}
-	
+
 	consumer = [[OAConsumer alloc] initWithKey:consumerKey secret:consumerSecret];
 	request = [[OAMutableURLRequest alloc] initWithURL:url
 									consumer:consumer
-									token:nil   
+									token:nil
 									realm:nil];  // our service provider doesn't specify a realm
-		
+
 	[request setHTTPMethod:method];
 	if(body)
 	{
@@ -84,8 +84,8 @@
 		else {
 			[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 		}
-		
-	} 
+
+	}
 	OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
 	BOOL makeAsync = NO;
 	if(MSDelegate)

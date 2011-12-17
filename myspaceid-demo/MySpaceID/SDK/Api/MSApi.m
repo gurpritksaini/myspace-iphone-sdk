@@ -21,7 +21,7 @@
 
 /*
  *  Constructor
- *  Description: 
+ *  Description:
  *  @param consumerKey Required
  *  @param consumeSecret Required
  *  @param accessKey Optional
@@ -30,8 +30,8 @@
  *  @return MySpace class to be used to communicate with the MySpace Developer Platform
  */
 
-+ (MSApi*) sdkWith:(NSString*)consumerKey consumerSecret:(NSString*)consumerSecret 
-		   accessKey:(NSString*)accessKey	accessSecret:(NSString*)accessSecret isOnsite:(BOOL)isOnsite 
++ (MSApi*) sdkWith:(NSString*)consumerKey consumerSecret:(NSString*)consumerSecret
+		   accessKey:(NSString*)accessKey	accessSecret:(NSString*)accessSecret isOnsite:(BOOL)isOnsite
 		   urlScheme:(NSString*)urlScheme delegate:(id<MSRequest>) delegate{
 	MSApi *sdk = [[[MSApi alloc] init]autorelease];
 	sdk.consumerKey = consumerKey;
@@ -55,13 +55,13 @@
 		urlScheme = nil;
 		delegate = nil;
 	}
-	
+
 	return self;
 }
 
 
 - (void) dealloc{
-	
+
 	[consumerKey release];
 	[consumerSecret release];
 	[accessKey	 release];
@@ -81,13 +81,13 @@
 	if(context)
 		return context;
 	if(isOnsite){
-		context= [MSOnsiteContext contextWithConsumerKey:consumerKey 
+		context= [MSOnsiteContext contextWithConsumerKey:consumerKey
 										  consumerSecret:consumerSecret urlScheme:urlScheme];
 		[context retain];
 	}
 	else {
-		context= [MSOffsiteContext contextWithConsumerKey:consumerKey 
-																 consumerSecret:consumerSecret 
+		context= [MSOffsiteContext contextWithConsumerKey:consumerKey
+																 consumerSecret:consumerSecret
 												 tokenKey:accessKey tokenSecret:accessSecret urlScheme:urlScheme];
 		[context retain];
 	}
@@ -108,7 +108,7 @@
 		MSOffsiteContext	*offSiteContext = (MSOffsiteContext*)[self getContext];
 		[offSiteContext	 getRequestToken];
 	}
-	
+
 }
 
 /*
@@ -143,7 +143,7 @@
 		MSOffsiteContext	*offSiteContext = (MSOffsiteContext*)[self getContext];
 		[offSiteContext	 logOut];
 	}
-	
+
 }
 
 #pragma mark --Person--
@@ -191,8 +191,8 @@
 	restV1Api.methodName = @"getFriendship";
 	NSString* dataAsString =[restV1Api getFriendship:[personId intValue] friendIds:friendIds];
 
-	
-	return dataAsString; 
+
+	return dataAsString;
 }
 
 #pragma mark --Albums--
@@ -216,13 +216,13 @@
  *  Resource: http://opensocial.myspace.com/roa/09/albums/{personId}/@self
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_Albums
  *  Description: Add a new album
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param caption: caption to associate with album
  *  @param location: location of album
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the Albums object.
  */
-- (NSString*) addAlbum:(NSString*)personId caption:(NSString*)caption location:(NSString*)location 
+- (NSString*) addAlbum:(NSString*)personId caption:(NSString*)caption location:(NSString*)location
 	   queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"addAlbum";
@@ -234,7 +234,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/albums/{personId}/@self
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_Albums
  *  Description: update an existing album
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param caption: caption to associate with album
  *  @param location: location of album
@@ -256,7 +256,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@self/{albumId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Get a person's own mediaItems from an album
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the MediaItems object.
@@ -272,7 +272,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@friends/{albumId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Get a friends's mediaItems from an album
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the MediaItems object.
@@ -288,13 +288,13 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@friends/{albumId}/{mediaItemId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Get a friends's mediaItems from an album
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param mediaItemId: The id of the mediaItem desired.
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the MediaItem object.
  */
-- (NSString*) getMediaItem:(NSString*)personId albumId:(NSString*)albumId mediaItemId:(NSString*)mediaItemId 
+- (NSString*) getMediaItem:(NSString*)personId albumId:(NSString*)albumId mediaItemId:(NSString*)mediaItemId
 		   queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"getMediaItem";
@@ -321,7 +321,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@friends/{albumId}/{mediaItemId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Updatea  media item
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param mediaItemId: The id of the mediaItem desired.
  *  @param title: The title of the mediaItem
@@ -340,7 +340,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@friends/{albumId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Uploads a photo to a specific album.
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param caption: the caption of the photo
  *  @param photoData: The NSData format of the image.
@@ -348,8 +348,8 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the MediaItem object.
  */
-- (NSString*) addPhoto:(NSString*)personId albumId:(NSString*)albumId 
-			   caption:(NSString*)caption photoData:(NSData*)photoData imageType:(NSString*) imageType 
+- (NSString*) addPhoto:(NSString*)personId albumId:(NSString*)albumId
+			   caption:(NSString*)caption photoData:(NSData*)photoData imageType:(NSString*) imageType
 	   queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"addPhoto";
@@ -361,7 +361,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaItems/{personId}/@friends/{albumId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_0.9_MediaItems
  *  Description: Uploads a video to a specific album.
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param caption: the caption of the photo
  *  @param photoData: The NSData format of the image.
@@ -369,13 +369,13 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the MediaItem object.
  */
-- (NSString*) addVideo:(NSString*)personId albumId:(NSString*)albumId 
-			   caption:(NSString*)caption videoData:(NSData*)videoData videoType:(NSString*) videoType 
+- (NSString*) addVideo:(NSString*)personId albumId:(NSString*)albumId
+			   caption:(NSString*)caption videoData:(NSData*)videoData videoType:(NSString*) videoType
 		   description:(NSString*) description tags:(NSArray*)tags msCategories:(NSString*)msCategories
 			  language:(NSString*) language queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"addVideo";
-	return [roaApi addVideo:personId albumId:albumId caption:caption videoData:videoData 
+	return [roaApi addVideo:personId albumId:albumId caption:caption videoData:videoData
 				  videoType:videoType description:description tags:tags msCategories:msCategories language:language queryParameters:queryParameters];
 }
 
@@ -387,7 +387,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/mediaitemcomments/{personId}/@self/{albumId}/{mediaItemId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_MediaItemComments
  *  Description: Returns comments about a given MediaItem
- *  @param personId:  @me, integer, or myspace.com.person.[integer value] 
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param albumId: the albumId of the album to update.
  *  @param mediaItemId: the id of the MediaItem we want comments about.
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
@@ -413,9 +413,9 @@
  *  @param activityTypes: To obtain a stream containing only certain types of activities, modify the call with the activitytypes query string parameter.
  *                                       Use the MSActivityTypes.h file to find constants for this parameter.
  *  @param extensions: Pipe delimited list of options syndicating the activity stream. Name fo the query string parameter is "extensions"
- *                                   Possible values: actor|subject|activitytarget|fullmetadata|standardizetags|feedsync|all. 
+ *                                   Possible values: actor|subject|activitytarget|fullmetadata|standardizetags|feedsync|all.
  *								      See http://wiki.developer.myspace.com/index.php?title=ActivityStream_Queries#Extensions
- *  @param composite: Set this query string parameter to true to get one atom entry for all activities of the same type on the same day. If the objects of the 
+ *  @param composite: Set this query string parameter to true to get one atom entry for all activities of the same type on the same day. If the objects of the
  *                                  activities go into targets then they will be grouped by target. Ex: Max uploaded 5 photos into the album Medieval Times.
  *								      See http://wiki.developer.myspace.com/index.php?title=ActivityStream_Queries#Composite
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
@@ -439,9 +439,9 @@
  *  @param activityTypes: To obtain a stream containing only certain types of activities, modify the call with the activitytypes query string parameter.
  *                                       Use the MSActivityTypes.h file to find constants for this parameter.
  *  @param extensions: Pipe delimited list of options syndicating the activity stream. Name fo the query string parameter is "extensions"
- *                                   Possible values: actor|subject|activitytarget|fullmetadata|standardizetags|feedsync|all. 
+ *                                   Possible values: actor|subject|activitytarget|fullmetadata|standardizetags|feedsync|all.
  *								      See http://wiki.developer.myspace.com/index.php?title=ActivityStream_Queries#Extensions
- *  @param composite: Set this query string parameter to true to get one atom entry for all activities of the same type on the same day. If the objects of the 
+ *  @param composite: Set this query string parameter to true to get one atom entry for all activities of the same type on the same day. If the objects of the
  *                                  activities go into targets then they will be grouped by target. Ex: Max uploaded 5 photos into the album Medieval Times.
  *								      See http://wiki.developer.myspace.com/index.php?title=ActivityStream_Queries#Composite
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
@@ -482,7 +482,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/appdata/{personId}/{selector}/{appId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_AppData
  *  Description: Returns all application data for given user with current application
- *  @param personId:  @me, integer, or myspace.com.person.[integer value]  
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param selector: @self, @all, @friends, groupId
  *  @param appId: id of current application
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
@@ -499,7 +499,7 @@
  *  Resource: http://opensocial.myspace.com/roa/09/appdata/{personId}/{selector}/{appId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_AppData
  *  Description: Adds application data for given user with current application
- *  @param personId:  @me, integer, or myspace.com.person.[integer value]  
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param selector: @self, @all, @friends, groupId
  *  @param userId: UserID of the user associated with the appData. Goes into Http body
  *  @param appId: id of current application
@@ -508,7 +508,7 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the AppData object.
  */
-- (NSString*) addAppData:(NSString*)personId userId:(NSString*)userId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys 
+- (NSString*) addAppData:(NSString*)personId userId:(NSString*)userId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys
 				  values:(NSArray*)values queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"addAppData";
@@ -520,14 +520,14 @@
  *  Resource: http://opensocial.myspace.com/roa/09/appdata/{personId}/{selector}/{appId}
  *  Details:  http://wiki.developer.myspace.com/index.php?title=OpenSocial_v0.9_AppData
  *  Description: Deletes application data for given user with current application
- *  @param personId:  @me, integer, or myspace.com.person.[integer value]  
+ *  @param personId:  @me, integer, or myspace.com.person.[integer value]
  *  @param selector: @self, @all, @friends, groupId
  *  @param appId: id of current application
  *  @param keys: array of keys that are to be deleted
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing the AppData object.
  */
-- (NSString*) deleteAppData:(NSString*)personId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys 
+- (NSString*) deleteAppData:(NSString*)personId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys
 			queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"deleteAppData";
@@ -547,8 +547,8 @@
 	MSRestV1 *restV1Api = [MSRestV1 apiWithContext:[self getContext]];
 	NSString* dataAsString = [restV1Api getGlobalAppData:keys];
 	restV1Api.methodName = @"getGlobalAppData";
-	
-	return dataAsString; 
+
+	return dataAsString;
 }
 
 /*
@@ -564,8 +564,8 @@
 	MSRestV1 *restV1Api = [MSRestV1 apiWithContext:[self getContext]];
 	restV1Api.methodName = @"addGlobalAppData";
 	NSString* dataAsString = [restV1Api addGlobalAppData:globalAppDataPairs];
-	
-	return dataAsString; 
+
+	return dataAsString;
 }
 
 /*
@@ -581,8 +581,8 @@
 	MSRestV1 *restV1Api = [MSRestV1 apiWithContext:[self getContext]];
 	restV1Api.methodName = @"deleteGlobalAppData";
 	NSString* dataAsString = [restV1Api deleteGlobalAppData:keys];
-	
-	return dataAsString; 
+
+	return dataAsString;
 }
 
 #pragma mark --Groups--
@@ -613,7 +613,7 @@
  *  @return NSString representing Group object.
  */
 - (NSString*) getGroup:(NSString*)personId groupId:(NSString*)groupId queryParameters:(NSDictionary*)queryParameters{
-	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];		
+	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"getGroup";
 	return [roaApi getGroup:personId groupId:groupId queryParameters:queryParameters];
 }
@@ -679,7 +679,7 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing Moods object.
  */
-- (NSString*) getFriendsMoodStatus:(NSString*)personId includeHistory:(BOOL)includeHistory 
+- (NSString*) getFriendsMoodStatus:(NSString*)personId includeHistory:(BOOL)includeHistory
 				   queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"getFriendsMoodStatus";
@@ -698,7 +698,7 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing Moods object.
  */
-- (NSString*) getFriendMoodStatus:(NSString*)personId friendId:(NSString*)friendId includeHistory:(BOOL)includeHistory 
+- (NSString*) getFriendMoodStatus:(NSString*)personId friendId:(NSString*)friendId includeHistory:(BOOL)includeHistory
 				  queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"getFriendMoodStatus";
@@ -723,7 +723,7 @@
 							latitude:(NSString*)latitude longitude:(NSString*)longitude queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"updatePersonMoodStatus";
-	return [roaApi updatePersonMoodStatus:personId moodName:moodName status:status latitude:latitude longitude:longitude 
+	return [roaApi updatePersonMoodStatus:personId moodName:moodName status:status latitude:latitude longitude:longitude
 						  queryParameters:queryParameters];
 }
 
@@ -758,7 +758,7 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing Moods object.
  */
-- (NSString*) addStatusMoodComment:(NSString*) persondId statusId:(NSString*)statusId body:(NSString*)body 
+- (NSString*) addStatusMoodComment:(NSString*) persondId statusId:(NSString*)statusId body:(NSString*)body
 				   queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"addStatusMoodComment";
@@ -779,7 +779,7 @@
  *  @param queryParameters: Any queryParameters that are desired in the request. See the documentation for options.
  *  @return NSString representing Moods object.
  */
-- (NSString*) sendNotification:(NSString*)personId recipientIds:(NSArray*)recipientIds mediaItems:(NSArray*)mediaItems 
+- (NSString*) sendNotification:(NSString*)personId recipientIds:(NSArray*)recipientIds mediaItems:(NSArray*)mediaItems
 			templateParameters:(NSArray*)templateParameters queryParameters:(NSDictionary*)queryParameters{
 	MSRoaApi *roaApi = [MSRoaApi apiWithContext:[self getContext]];
 	roaApi.methodName = @"sendNotification";
@@ -802,9 +802,9 @@
 	MSRestV1 *restV1Api = [MSRestV1 apiWithContext:[self getContext]];
 	restV1Api.methodName = @"getIndicators";
 	NSString* dataAsString = [restV1Api getIndicators:[personId intValue]];
-	
-	return dataAsString; 
-	
+
+	return dataAsString;
+
 }
 
 #pragma mark --ProfileComments--
@@ -872,14 +872,14 @@
  *  @param startPage: Optional Parameter
  *  @param searchBy: Optional Parameter
  *  @param gender: Optional Parameter
- *  @param hasPhoto: Optional Parameter 
+ *  @param hasPhoto: Optional Parameter
  *  @param minAge: Optional Parameter
  *  @param maxAge: Optional Parameter
  *  @param location: Optional Parameter
- *  @param distance: Optional Parameter 
- *  @param latitude: Optional Parameter 
+ *  @param distance: Optional Parameter
+ *  @param latitude: Optional Parameter
  *  @param longitude: Optional Parameter
- *  @param culture: Optional Parameter 
+ *  @param culture: Optional Parameter
  *  @return NSString representing ProfileComments object.
  */
 -(NSString*) searchPeople:(NSString*)searchTerms format:(NSString*)format count:(NSString*)count startPage:(NSString*)startPage
@@ -888,8 +888,8 @@
 			  countryCode:(NSString*)countryCode{
 	MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:[self getContext]];
 	searchApi.methodName = @"searchPeople";
-	return [searchApi searchPeople:searchTerms format:format count:count startPage:startPage searchBy:searchBy 
-							gender:gender hasPhoto:hasPhoto minAge:minAge maxAge:maxAge location:location 
+	return [searchApi searchPeople:searchTerms format:format count:count startPage:startPage searchBy:searchBy
+							gender:gender hasPhoto:hasPhoto minAge:minAge maxAge:maxAge location:location
 						  distance:distance latitude:latitude longitude:longitude culture:culture countryCode:countryCode];
 }
 
@@ -936,9 +936,9 @@
  *  @param format: Optional Parameter
  *  @param count: Optional Parameter
  *  @param startPage: Optional Parameter
- *  @param culture: Optional Parameter 
- *  @param sortBy: Optional Parameter 
- *  @param sortOrder: Optional Parameter 
+ *  @param culture: Optional Parameter
+ *  @param sortBy: Optional Parameter
+ *  @param sortOrder: Optional Parameter
  *  @return NSString representing ProfileComments object.
  */
 -(NSString*) searchImages:(NSString*)searchTerms format:(NSString*)format count:(NSString*)count startPage:(NSString*)startPage
@@ -961,7 +961,7 @@
 -(NSString*) searchVideos:(NSString*)searchTerms{
 	MSOpenSearchApi *searchApi = [MSOpenSearchApi apiWithContext:[self getContext]];
 	searchApi.methodName = @"searchVideos";
-	return [searchApi searchVideos:searchTerms];	
+	return [searchApi searchVideos:searchTerms];
 }
 
 /*
@@ -990,9 +990,9 @@
  *  @param format: Optional Parameter
  *  @param count: Optional Parameter
  *  @param startPage: Optional Parameter
- *  @param culture: Optional Parameter 
- *  @param tag: Optional Parameter 
- *  @param videoMode: Optional Parameter 
+ *  @param culture: Optional Parameter
+ *  @param tag: Optional Parameter
+ *  @param videoMode: Optional Parameter
  *  @return NSString representing ProfileComments object.
  */
 -(NSString*) searchVideos:(NSString*)searchTerms format:(NSString*)format count:(NSString*)count startPage:(NSString*)startPage

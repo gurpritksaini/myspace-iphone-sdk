@@ -36,12 +36,12 @@
 		responseData = nil;
 		httpResponse = nil;
 	}
-	
+
 	return self;
 }
 
 - (void) dealloc{
-	
+
 	[context release];
 	self.responseData = nil;
 	[responseData release];
@@ -70,18 +70,18 @@
 	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
 
-- (NSString*) getMediaItem:(NSString*)personId albumId:(NSString*)albumId mediaItemId:(NSString*)mediaItemId 
+- (NSString*) getMediaItem:(NSString*)personId albumId:(NSString*)albumId mediaItemId:(NSString*)mediaItemId
 		   queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_MEDIA_ITEMS, personId, MS_SELECTOR_SELF, albumId];
 	urlString = [NSString stringWithFormat:@"%@/%@", urlString, mediaItemId];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];		
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 
-	
+
 }
 
 - (NSString*) getSupportedVideoCategories:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_MEDIA_ITEMS, personId, @"@videos", @"@supportedCategories"];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];		
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
 
 - (NSString*) updateMediaItem:(NSString*)personId albumId:(NSString*)albumId mediaItemId:(NSString*)mediaItemId
@@ -95,15 +95,15 @@
 	urlString = [NSString stringWithFormat:@"%@/%@", urlString, mediaItemId];
 	[json	 release];
 	[dict release];
-	return [self makeRawOSRequest:urlString queryParameters:nil 
+	return [self makeRawOSRequest:urlString queryParameters:nil
 					requestMethod:@"POST" requestBody:[body dataUsingEncoding:NSASCIIStringEncoding]  contentType:@"application/json"];
-	
-		
-	
+
+
+
 }
 
-- (NSString*) addPhoto:(NSString*)personId albumId:(NSString*)albumId 
-			   caption:(NSString*)caption photoData:(NSData*)photoData imageType:(NSString*) imageType 
+- (NSString*) addPhoto:(NSString*)personId albumId:(NSString*)albumId
+			   caption:(NSString*)caption photoData:(NSData*)photoData imageType:(NSString*) imageType
 	   queryParameters:(NSDictionary*)queryParameters;{
 
 	if(queryParameters == nil)
@@ -113,12 +113,12 @@
 	if(imageType == nil)
 		imageType = @"image/jpeg";
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_MEDIA_ITEMS, personId, MS_SELECTOR_SELF, albumId];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters
 					requestMethod:@"POST" requestBody:photoData  contentType:imageType];
 }
 
-- (NSString*) addVideo:(NSString*)personId albumId:(NSString*)albumId 
-			   caption:(NSString*)caption videoData:(NSData*)videoData videoType:(NSString*) videoType 
+- (NSString*) addVideo:(NSString*)personId albumId:(NSString*)albumId
+			   caption:(NSString*)caption videoData:(NSData*)videoData videoType:(NSString*) videoType
 		   description:(NSString*) description tags:(NSArray*)tags msCategories:(NSString*)msCategories
 			  language:(NSString*) language queryParameters:(NSDictionary*)queryParameters{
 	if(queryParameters == nil)
@@ -147,9 +147,9 @@
 		videoType = @"video/quicktime";
 
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_MEDIA_ITEMS, personId, MS_SELECTOR_SELF, albumId];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters
 					requestMethod:@"POST" requestBody:videoData  contentType: videoType];
-	
+
 }
 
 #pragma mark --MediaItemComments--
@@ -178,7 +178,7 @@
 }
 
 - (NSString*) getGroup:(NSString*)personId groupId:(NSString*)groupId queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_PEOPLE, personId, groupId];
 	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 
@@ -188,30 +188,30 @@
 #pragma mark Albums
 
 - (NSString*) getAlbums:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_ALBUMS, personId, MS_SELECTOR_SELF];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
-- (NSString*) addAlbum:(NSString*)personId caption:(NSString*)caption location:(NSString*)location 
+- (NSString*) addAlbum:(NSString*)personId caption:(NSString*)caption location:(NSString*)location
 	   queryParameters:(NSDictionary*)queryParameters{
-	
+
 	SBJSON *json = [[SBJSON alloc] init];
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	if(caption)
 		[dict setValue:caption forKey:@"caption"];
 	if(location)
 		[dict setValue:location forKey:@"location"];
-	
+
 	NSString *body = [json stringWithObject:dict];
 	NSLog(@"%@",body);
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_ALBUMS, personId, MS_SELECTOR_SELF];
 	[json	 release];
 	[dict release];
-	return [self makeRawOSRequest:urlString queryParameters:nil requestMethod:@"PUT" requestBody:[body dataUsingEncoding:NSASCIIStringEncoding]  
+	return [self makeRawOSRequest:urlString queryParameters:nil requestMethod:@"PUT" requestBody:[body dataUsingEncoding:NSASCIIStringEncoding]
 					  contentType:@"application/json"];
-		
-		
-	
+
+
+
 }
 - (NSString*) updateAlbum:(NSString*)personId albumId:(NSString*)albumId caption:(NSString*)caption location:(NSString*)location
 		  queryParameters:(NSDictionary*)queryParameters{
@@ -229,10 +229,10 @@
 	urlString = [NSString stringWithFormat:@"%@/%@", urlString, albumId];
 	[json	 release];
 	[dict release];
-	return [self makeRawOSRequest:urlString queryParameters:nil requestMethod:@"POST" 
-					  requestBody:[body dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-		
+	return [self makeRawOSRequest:urlString queryParameters:nil requestMethod:@"POST"
+					  requestBody:[body dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
 }
 
 #pragma mark --Activites--
@@ -240,15 +240,15 @@
 - (NSString*) getActivities:(NSString*)personId appId:(NSString*)appId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_ACTIVITIES, personId, MS_SELECTOR_SELF];
 	if(appId)
-		urlString = [NSString stringWithFormat:@"%@/%@", urlString, appId]; 
-	
+		urlString = [NSString stringWithFormat:@"%@/%@", urlString, appId];
+
 	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
 - (NSString*) getFriendActivities:(NSString*)personId appId:(NSString*)appId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_ACTIVITIES, personId, MS_SELECTOR_FRIENDS];
 	if(appId)
-		urlString = [NSString stringWithFormat:@"%@/%@", urlString, appId]; 
-	
+		urlString = [NSString stringWithFormat:@"%@/%@", urlString, appId];
+
 	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
 
@@ -268,21 +268,21 @@
 	urlString = [NSString stringWithFormat:@"%@/@app", urlString];
 	[json	 release];
 	[dict release];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST" 
-					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-	
-	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST"
+					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
+
 }
 
 #pragma mark --AppData--
 
 - (NSString*) getAppData:(NSString*)personId selector:(NSString*)selector appId:(NSString*)appId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_APPDATA, personId, selector, appId];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" requestBody:nil contentType:nil];
 }
 
-- (NSString*) addAppData:(NSString*)personId userId:(NSString*)userId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys 
+- (NSString*) addAppData:(NSString*)personId userId:(NSString*)userId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys
 				  values:(NSArray*)values queryParameters:(NSDictionary*)queryParameters{
 
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_APPDATA, personId, selector, appId];
@@ -308,7 +308,7 @@
 	for (i=0; i<count; i++) {
 		NSArray *array = [NSArray arrayWithObjects:[keys objectAtIndex:i], [values objectAtIndex:i], nil];
 		NSArray *array2 = [NSArray arrayWithObjects:@"key", @"value", nil];
-		NSDictionary *newAppData = [NSDictionary dictionaryWithObjects:array									
+		NSDictionary *newAppData = [NSDictionary dictionaryWithObjects:array
 															   forKeys:array2];
 		[appDataArray addObject:newAppData];
 	}
@@ -318,14 +318,14 @@
 	[appDataArray release];
 	[json	 release];
 	[dict release];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST" 
-					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST"
+					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
 }
 
 - (NSString*) deleteAppData:(NSString*)personId selector:(NSString*)selector appId:(NSString*)appId keys:(NSArray*)keys queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_APPDATA, personId, selector, appId];
 	if(queryParameters ==nil)
 		queryParameters= [[NSMutableDictionary new] autorelease];
@@ -340,44 +340,44 @@
 	if (fieldList) {
 		[queryParameters setValue:fieldList forKey:@"fields"];
 	}
-	
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"DELETE" requestBody:nil contentType:nil];		
+
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"DELETE" requestBody:nil contentType:nil];
 }
 
 #pragma mark --StatusMood--
 - (NSString*) getSupportedMoods:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId, @"@supportedMood"];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
-					  contentType:nil];	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
+					  contentType:nil];
 }
 - (NSString*) getSingleMood:(NSString*)personId moodId:(NSString*)moodId queryParameters:(NSDictionary*)queryParameters{
-	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId, 
+	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId,
 						   [NSString stringWithFormat:@"%@/%@", @"@supportedMood",moodId]];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
-					  contentType:nil];	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
+					  contentType:nil];
 }
 - (NSString*) getPersonMoodStatus:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
 	self.methodName = @"getPersonMoodStatus";
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId, MS_SELECTOR_SELF];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
 					  contentType:nil];
 }
 
-- (NSString*) getFriendsMoodStatus:(NSString*)personId includeHistory:(BOOL)includeHistory 
+- (NSString*) getFriendsMoodStatus:(NSString*)personId includeHistory:(BOOL)includeHistory
 				 queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId, MS_SELECTOR_FRIENDS];
 	if(includeHistory)
 	{
 		urlString = [NSString stringWithFormat:@"%@/history", urlString];
 	}
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
 					  contentType:nil];
 }
-- (NSString*) getFriendMoodStatus:(NSString*)personId friendId:(NSString*)friendId includeHistory:(BOOL)includeHistory 
+- (NSString*) getFriendMoodStatus:(NSString*)personId friendId:(NSString*)friendId includeHistory:(BOOL)includeHistory
 				queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD, personId, MS_SELECTOR_FRIENDS];
 	urlString = [NSString stringWithFormat:@"%@/%@", urlString, friendId];
@@ -385,8 +385,8 @@
 	{
 		urlString = [NSString stringWithFormat:@"%@/history", urlString];
 	}
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-									  requestBody:nil 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+									  requestBody:nil
 									  contentType:nil];
 }
 - (NSString*) updatePersonMoodStatus:(NSString*)personId moodName:(NSString*)moodName status:(NSString*)status
@@ -401,32 +401,32 @@
 		[geoDict setValue:longitude forKey:@"longitude"];
 		[dict setValue:geoDict forKey:@"currentLocation"];
 	}
-	
+
 	[dict setValue:moodName forKey:@"moodName"];
 	[dict setValue:status forKey:@"status"];
-					
+
 	NSString *requestBody = [json stringWithObject:dict];
 	NSLog(@"%@",requestBody);
 	[dict release];
 	[json	 release];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"PUT" 
-					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"PUT"
+					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
 }
 
 #pragma mark --Groups--
 - (NSString*) getGroups:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_GROUPS, personId];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
-					  contentType:nil];	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
+					  contentType:nil];
 }
 
 #pragma mark --StatusMood Comments--
 
 - (NSString*) getStatusMoodComments:(NSString*)personId statusId:(NSString*)statusId queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD_COMMENTS, personId, MS_SELECTOR_SELF];
 	if(queryParameters == nil)
 		queryParameters	= [[NSMutableDictionary new] autorelease];
@@ -434,14 +434,14 @@
 		queryParameters = [NSMutableDictionary dictionaryWithDictionary:queryParameters];
 	}
 	[queryParameters setValue:statusId forKey:@"statusId"];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
 					  contentType:nil];
 }
 
-- (NSString*) addStatusMoodComment:(NSString*) personId statusId:(NSString*)statusId body:(NSString*)body 
+- (NSString*) addStatusMoodComment:(NSString*) personId statusId:(NSString*)statusId body:(NSString*)body
 				 queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_STATUSMOOD_COMMENTS, personId, MS_SELECTOR_SELF];
 	if(queryParameters == nil)
 		queryParameters	= [[NSMutableDictionary new] autorelease];
@@ -454,47 +454,47 @@
 	NSMutableDictionary *dict = [NSMutableDictionary new];
 
 	[dict setValue:body forKey:@"body"];
-	
+
 	NSString *requestBody = [json stringWithObject:dict];
 	NSLog(@"%@",requestBody);
 	[dict release];
 	[json	 release];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST" 
-					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST"
+					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
 }
 
 #pragma mark --Notifications--
 
-- (NSString*) sendNotification:(NSString*)personId recipientIds:(NSArray*)recipientIds mediaItems:(NSArray*)mediaItems 
+- (NSString*) sendNotification:(NSString*)personId recipientIds:(NSArray*)recipientIds mediaItems:(NSArray*)mediaItems
 		  templateParameters:(NSArray*)templateParameters queryParameters:(NSDictionary*)queryParameters{
-	
+
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_NOTIFICATIONS, personId, MS_SELECTOR_SELF];
-		
+
 	SBJSON *json = [[SBJSON alloc] init];
 	NSMutableDictionary *dict = [NSMutableDictionary new];
 	[dict setValue:recipientIds forKey:@"recipientIds"];
 	[dict setValue:mediaItems forKey:@"mediaItems"];
 	[dict setValue:templateParameters forKey:@"templateParameters"];
-	
+
 	NSString *requestBody = [json stringWithObject:dict];
 	NSLog(@"%@",requestBody);
 	[dict release];
 	[json	 release];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST" 
-					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]  
-					  contentType:@"application/json"];		
-	
-	
-	
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"POST"
+					  requestBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]
+					  contentType:@"application/json"];
+
+
+
 }
 
 #pragma mark --ProfileComments--
 - (NSString*) getProfileComments:(NSString*)personId queryParameters:(NSDictionary*)queryParameters{
 	NSString *urlString = [NSString stringWithFormat:MS_ROA_PROFILE_COMMENTS, personId, MS_SELECTOR_SELF];
-	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET" 
-					  requestBody:nil 
+	return [self makeRawOSRequest:urlString queryParameters:queryParameters requestMethod:@"GET"
+					  requestBody:nil
 					  contentType:nil];
 }
 
@@ -515,20 +515,20 @@
 				amperSand = @"&";
 			queryString = [queryString stringByAppendingString:[NSString stringWithFormat:@"%@%@=%@", amperSand, key, [queryParams objectForKey:key]]];
 		}
-		
+
 		if([queryString isEqualToString:@"?"])
 			queryString = @"";
 		NSURL *url = [NSURL URLWithString: [urlString stringByAppendingString:queryString]];
 		[context makeRequest:url method:requestMethod body:requestBody contentType:contentType delegate:self];
-		
+
 	}
 	NSString* dataAsString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
 	return [dataAsString autorelease];
-	
+
 }
 
-- (NSMutableDictionary*) makeQueryDictionary:(NSArray*) fields 
-					count:(NSString*)count filterBy:(NSString*)filterBy filterOp:(NSString*)filterOp 
+- (NSMutableDictionary*) makeQueryDictionary:(NSArray*) fields
+					count:(NSString*)count filterBy:(NSString*)filterBy filterOp:(NSString*)filterOp
 					filterValue:(NSString*)filterValue format:(NSString*)format statusId:(NSString*)statusId
 				    postedDate:(NSString*)postedDate startIndex:(NSString*)startIndex updatedSince:(NSString*) updatedSince{
 	NSMutableDictionary *queryParams = [[NSMutableDictionary new]autorelease];
@@ -540,7 +540,7 @@
 		}
 		fieldList = [fieldList substringToIndex:[fieldList length] - 1];
 	}
-	
+
 	if (fieldList) {
 		[queryParams setValue:fieldList forKey:@"fields"];
 	}
@@ -551,7 +551,7 @@
 		[queryParams setValue:filterBy forKey:@"filterBy"];
 	}
 	if (filterOp) {
-		[queryParams setValue:filterOp forKey:@"filterOp"];	
+		[queryParams setValue:filterOp forKey:@"filterOp"];
 	}
 	if (filterValue) {
 		[queryParams setValue:filterValue forKey:@"filterValue"];
@@ -572,7 +572,7 @@
 		[queryParams setValue:updatedSince forKey:@"updatedSince"];
 	}
 	return queryParams;
-	
+
 }
 
 
@@ -585,11 +585,11 @@
 	NSString *dataOutput = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	self.httpResponse = (NSHTTPURLResponse*)[ticket response];
 	self.responseStatusCode = [httpResponse statusCode];
-	NSLog(@"UrlRequest: %@, Http Status Code: %@, Http Response: %@",  
-		  [[[ticket response] URL] absoluteString], 
-		  [NSString stringWithFormat:@"%d", responseStatusCode], 
+	NSLog(@"UrlRequest: %@, Http Status Code: %@, Http Response: %@",
+		  [[[ticket response] URL] absoluteString],
+		  [NSString stringWithFormat:@"%d", responseStatusCode],
 		  dataOutput);
-	
+
 	if (true) {
 		self.responseData = data;
 	}
@@ -597,7 +597,7 @@
 	if(context.MSDelegate)
 	{
 		NSString* dataAsString = [[[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding] autorelease];
-		if ([context.MSDelegate respondsToSelector:@selector(api:didFinishMethod:withValue:withStatusCode:)]) {    
+		if ([context.MSDelegate respondsToSelector:@selector(api:didFinishMethod:withValue:withStatusCode:)]) {
 			[context.MSDelegate api:self didFinishMethod:self.methodName withValue:dataAsString withStatusCode:self.responseStatusCode];
 		}
 	}
@@ -607,18 +607,18 @@
 	NSString *message = [NSString stringWithFormat:@"Http Response Error %@ %@",
 						 [error localizedDescription],
 						 [error localizedFailureReason]];
-	
+
 	NSLog(@"%@", message);
 	self.httpResponse = (NSHTTPURLResponse*)[ticket response];
 	self.responseStatusCode = [httpResponse statusCode];
-	
+
 	if(context.MSDelegate)
 	{
-		if ([context.MSDelegate respondsToSelector:@selector(api:didFailMethod:withError:)]) {    
+		if ([context.MSDelegate respondsToSelector:@selector(api:didFailMethod:withError:)]) {
 			[context.MSDelegate api:self didFailMethod:self.methodName withError:error];
 		}
 	}
-	
+
 }
 
 @end
