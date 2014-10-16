@@ -35,9 +35,9 @@
 @synthesize _delegate;
 
 - (void) fetchDataWithRequest:(OAMutableURLRequest*) request
-                     delegate:(id) delegate didFinishSelector:(SEL) didFinishSelector didFailSelector:(SEL) didFailSelector 
+                     delegate:(id) delegate didFinishSelector:(SEL) didFinishSelector didFailSelector:(SEL) didFailSelector
 					makeAsync:(BOOL) makeAsync{
-	
+
 	_delegate = [delegate retain];
 	_makeAsync	 = makeAsync;
 	_request = [request retain];
@@ -50,44 +50,44 @@
 	@try
 	{
 		if(_makeAsync){
-		
+
 			_connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self startImmediately:YES];
 			if (_connection == nil) {
 				/* inform the user that the connection failed */
-				NSString *message = NSLocalizedString (@"Unable to initiate request.", 
+				NSString *message = NSLocalizedString (@"Unable to initiate request.",
 													   @"NSURLConnection initialization method failed.");
 				NSLog(@"%@", message);
 			}
 		}
 		else
 		{
-		
+
            responseData   = [NSURLConnection sendSynchronousRequest:_request
                                                   returningResponse:&response
 					error:&error];
-			
+
 			if (error != nil) {
 				OAServiceTicket* ticket =
 				[OAServiceTicket ticketWithRequest:request
 										  response:response
 										 succeeded:NO];
-				
+
 				[_delegate performSelector:didFailSelector
 							   withObject:ticket
 							   withObject:error];
-				
+
 			} else {
 				OAServiceTicket* ticket =
 				[OAServiceTicket ticketWithRequest:request
 										  response:response
 										 succeeded:[(NSHTTPURLResponse*)response statusCode] < 400];
-				
+
 				[_delegate performSelector:didFinishSelector
 							   withObject:ticket
 							   withObject:responseData];
-				 
+
 			}
-		 
+
 		}
 	}
 	@catch (NSException *exception) {
@@ -126,7 +126,7 @@
         [OAServiceTicket ticketWithRequest:_request
                                   response:_response
                                  succeeded:[httpResponse statusCode] < 400];
-	if ([_delegate respondsToSelector:@selector(apiTicket:didFinishWithData:)]) {    
+	if ([_delegate respondsToSelector:@selector(apiTicket:didFinishWithData:)]) {
 		[_delegate apiTicket:ticket didFinishWithData:_receivedData];
 	}
 	[_receivedData release];
@@ -135,18 +135,18 @@
 	_connection = nil;
 }
 
-- (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error {  
+- (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error {
 	NSLog(@"%@", @"didFailWithError");
 
 	OAServiceTicket* ticket =
 	[OAServiceTicket ticketWithRequest:_request
 							  response:_response
 							 succeeded:NO];
-	
-	if ([_delegate respondsToSelector:@selector(apiTicket:didFailWithError:)]) {    
+
+	if ([_delegate respondsToSelector:@selector(apiTicket:didFailWithError:)]) {
 		[_delegate apiTicket:ticket didFinishWithError:error];
 	}
-	
+
 	[_receivedData release];
 	_receivedData = nil;
 	[_connection release];

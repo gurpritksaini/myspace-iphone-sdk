@@ -20,13 +20,13 @@
 @synthesize MSDelegate;
 
 - (void) makeRequest:(NSURL*)url method:(NSString*)method body:(NSString*) body delegate:(id<OAResponseDelegate>)delegate{
-		
+
 	[self doesNotRecognizeSelector:_cmd];
 }
 
 - (void) makeRequest:(NSURL*)url method:(NSString*)method body:(NSData*) body contentType:(NSString*) contentType delegate: (id<OAResponseDelegate>)delegate{
 	[self doesNotRecognizeSelector:_cmd];
-	
+
 }
 
 - (void) dealloc{
@@ -36,10 +36,10 @@
 	[oauthSecret release];
 	[requestToken release];
 	[accessToken release];
-	[urlScheme release];	
+	[urlScheme release];
 //	[MSDelegate release];
 	[super dealloc];
-	
+
 }
 
 @end

@@ -40,7 +40,7 @@
 @property (nonatomic, assign) id<OAResponseDelegate> _delegate;
 
 - (void) fetchDataWithRequest:(OAMutableURLRequest*) request
-                     delegate:(id) delegate didFinishSelector:(SEL) didFinishSelector didFailSelector:(SEL) didFailSelector 
+                     delegate:(id) delegate didFinishSelector:(SEL) didFinishSelector didFailSelector:(SEL) didFailSelector
 					makeAsync:(BOOL) makeAsync;
 
 
